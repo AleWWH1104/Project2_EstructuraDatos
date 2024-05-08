@@ -14,37 +14,14 @@ driver = GraphDatabase.driver(uri, auth=(username, password))
 def get_db_connection():
     return driver.session()
 
-
 @app.route('/')
 def home():
     return render_template('index.html')
 
-
-@app.route('/usuarios')
-def usuarios():
+@app.route('/User')
+def User():
     session = get_db_connection()
-    try:
-        result = session.run("MATCH (u:Usuario) RETURN u")
-        # Acceder a las propiedades de los nodos directamente
-        usuarios = [{key: value for key, value in record['u'].items()}
-                    for record in result]
-        print(usuarios)
-    finally:
-        session.close()
-    return render_template('usuarios.html', usuarios=usuarios)
-
-
-@app.route('/peliculas')
-def peliculas():
-    session = get_db_connection()
-    try:
-        result = session.run("MATCH (p:Pelicula) RETURN p")
-        peliculas = [{key: value for key, value in record['p'].items()}
-                     for record in result]
-    finally:
-        session.close()
-    return render_template('peliculas.html', peliculas=peliculas)
-
+    return render_template('User.html')
 
 @app.route('/NewUser', methods=['GET', 'POST'])
 def NewUser():

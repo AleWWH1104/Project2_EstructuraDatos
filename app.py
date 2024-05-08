@@ -1,5 +1,6 @@
-from flask import Flask, render_template
+from flask import *
 from neo4j import GraphDatabase
+import csv
 
 app = Flask(__name__)
 
@@ -16,7 +17,7 @@ def get_db_connection():
 
 @app.route('/')
 def home():
-    return render_template('index.html', message="Bienvenido a la página principal")
+    return render_template('index.html')
 
 
 @app.route('/usuarios')
@@ -43,6 +44,20 @@ def peliculas():
     finally:
         session.close()
     return render_template('peliculas.html', peliculas=peliculas)
+
+
+@app.route('/NewUser', methods=['GET', 'POST'])
+def NewUser():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+
+        with open('databases\\baseDatosUsuarios.csv', 'a', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow([username, password])
+
+        return redirect(url_for('home'))
+    return render_template('NewUser.html')
 
 
 if __name__ == '__main__':

@@ -5,18 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style\inicio.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/inicio.css') }}">
     <title>Sistema de Recomendacion</title>
 </head>
 
 <body>
     <div class="banner-home">
         <h1>MATCHFLIX</h1>
-        {{message}}
         <div class="boton-home">
-            <a href="NewUser.html">Crear usuario</a>
+            <a href="{{ url_for('NewUser') }}">Crear usuario</a>
             <a href="{{ url_for('peliculas') }}">Peliculas</a>
-            <a href="{{ url_for('usuarios') }}">usuarios</a>
+            <a href="{{ url_for('usuarios') }}">Usuarios</a>
         </div>
     </div>
 </body>

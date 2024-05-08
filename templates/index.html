@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/Users/alejandraayala/Documents/Trabajos_UVG/Semestre 3/EstructuraDatos/Project2_EstructuraDatos/style/inicio.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/inicio.css') }}">
     <title>Sistema de Recomendacion</title>
 </head>
+
 <body>
     <div class="banner-home">
         <h1>MATCHFLIX</h1>
         <div class="boton-home">
-            <a href="NewUser.html">Crear usuario</a>
-            <a href="User.html">Iniciar sesion</a>
+            <a href="{{ url_for('NewUser') }}">Crear usuario</a>
+            <a href="{{ url_for('peliculas') }}">Peliculas</a>
+            <a href="{{ url_for('usuarios') }}">Usuarios</a>
         </div>
     </div>
 </body>
+
 </html>

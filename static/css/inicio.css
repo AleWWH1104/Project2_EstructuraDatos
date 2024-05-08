@@ -5,7 +5,7 @@
 }
 
 .banner-home {
-    background-image: url("/static/img/fondoHome.jpg");
+    background-image: url("/static/images/fondoHome.jpg");
     height: 100vh;
     background-size: cover;
     position: relative;

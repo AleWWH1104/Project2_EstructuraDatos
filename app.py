@@ -3,6 +3,7 @@ from neo4j import GraphDatabase
 import csv
 
 app = Flask(__name__)
+app.secret_key = "trespelusas"
 
 # Configuración de la conexión a Neo4j
 uri = "neo4j+ssc://069aae57.databases.neo4j.io"
@@ -52,11 +53,26 @@ def NewUser():
         username = request.form['username']
         password = request.form['password']
 
+        user_exists = False
+        with open('databases\\baseDatosUsuarios.csv', 'r', newline='') as file:
+            reader = csv.reader(file)
+            for row in reader:
+                # Asegúrate de que row no está vacío y compara el nombre de usuario
+                if row and row[0] == username:
+                    user_exists = True
+                    break
+
+        if user_exists:
+            flash('El nombre de usuario ya está en uso, por favor elige otro.')
+            return redirect(url_for('NewUser'))
+
         with open('databases\\baseDatosUsuarios.csv', 'a', newline='') as file:
             writer = csv.writer(file)
             writer.writerow([username, password])
+            flash('Usuario registrado exitosamente!')
 
         return redirect(url_for('home'))
+
     return render_template('NewUser.html')
 
 

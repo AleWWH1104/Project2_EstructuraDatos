@@ -13,14 +13,13 @@ def nodosUsers(tx, user, password):
 # Función para crear nodos de usuarios
 def nodosPeliculas(tx, id_movie, movie, genre, year, duration):
     tx.run("CREATE (m:Pelicula {idMovie: $id, title: $title, year: $year, duration: $duration}) "
-            "CREATE (g:Genero {name: $genre}) "
-            "CREATE (d:Duracion {value: $duration}) "
-            "CREATE (m)-[:BELONGS_TO_GENRE]->(g) "
-            "CREATE (m)-[:HAS_DURATION]->(d)",id=id_movie, title=movie, genre=genre, year=year, duration=duration)
+            "CREATE (g:Genero {name: $genre})"
+            "CREATE (d:Duracion {value: $duration})",id=id_movie, title=movie, genre=genre, year=year, duration=duration)
 
 #CSV
 UserCSV = "/Users/alejandraayala/Documents/Trabajos_UVG/Semestre 3/EstructuraDatos/Project2_EstructuraDatos/databases/baseDatosUsuarios.csv"
-PeliculasCSV = ""
+PeliculasCSV = "/Users/alejandraayala/Documents/Trabajos_UVG/Semestre 3/EstructuraDatos/Project2_EstructuraDatos/databases/baseDatosPelis.csv"
+
 
 # Leer el CSV y crear nodos usuarios
 with open(UserCSV, newline='') as csvfile:
@@ -30,5 +29,10 @@ with open(UserCSV, newline='') as csvfile:
             session.write_transaction(nodosUsers, row['Usuario'], row['Contraseña'])
 
 # Leer el CSV y crear nodos pelicula
-with open(PeliculasCSV, newline='') as csvfile:
+with open(PeliculasCSV, newline='', encoding='utf-8') as csvfile:
     reader = csv.DictReader(csvfile)
+    for row in reader:
+        with driver.session() as session:
+            #session.write_transaction(nodosPeliculas, row['IdMovie'], row['Movie'], row['Genre'], row['Year'], row['Duracion'])
+            session.write_transaction(nodosPeliculas, row['IdMovie'], row['Movie'], row['Genre'], row['Year'], row['Duracion'])
+session.close()

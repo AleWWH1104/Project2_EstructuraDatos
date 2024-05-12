@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/inicio.css') }}">
+    <title>Inicio de Sesion</title>
+</head>
+<body>
+    <div class="log-user">
+        <h2>Ingrese sus credenciales</h2>
+        <form method="post">
+            <label for="username">Nombre de usuario:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <input type="submit" value="Entrar">
+        </form>
+    </div>
+</body>
+</html>

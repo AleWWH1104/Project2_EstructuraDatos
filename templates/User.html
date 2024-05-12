@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Users/alejandraayala/Documents/Trabajos_UVG/Semestre 3/EstructuraDatos/Project2_EstructuraDatos/style/inicio.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/inicio.css') }}">
     <title>Sistema de Recomendacion</title>
 </head>
 <body>
-    <div class="username"><h1>Hola {Usuario}</h1></div>
-    <div class="similares">
-        <p>Algunos usuarios similares tambien han visto:</p>
-        
-    </div>
+    <div class="banner-user"></div>
+    
 
 </body>
 </html>

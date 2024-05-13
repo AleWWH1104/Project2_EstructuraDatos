@@ -3,12 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/inicio.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/slider.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <title>Sistema de Recomendacion</title>
 </head>
 <body>
-    <div class="banner-user"></div>
-    
-
+    <div class="banner-user">
+        <h1>Bienvenido {Usuario}</h1>
+    </div>
+    <h2>Algunos usuarios similares tambien han visto:</h2>
+     <!-- Swiper -->
+    <div class="container">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-container mySwiper">
+            <div id="carrusel-container" class="swiper-wrapper"></div> <!-- Contenido de las cartas se generará dinámicamente -->
+        </div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/slider.js') }}"></script>
 </body>
+
 </html>

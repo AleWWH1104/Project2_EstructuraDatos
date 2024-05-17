@@ -1,31 +1,901 @@
-﻿IdMovie,Movie,Genre,Year,Duracion
-#00000,2016: Obama's America,Documentary,2012,81
-#00001,21 Jump Street,Comedy,2012,159
-#00002,Abraham Lincoln: Vampire Hunter,Horror,2012,157
-#00003,Act of Valor,Action,2012,125
-#00004,Albert Nobbs,Drama,2012,76
-#00005,American Reunion,Comedy,2012,62
-#00006,Amour,Drama,2012,64
-#00007,Anna Karenina,Drama,2012,68
-#00008,Barfi!,Comedy,2012,165
-#00009,Battleship,Action,2012,76
-#0000A,Beasts of the Southern Wild,Drama,2012,147
-#0000B,Big Miracle,Drama,2012,111
-#0000C,Brave,Adventure,2012,127
-#0000D,Casa de mi Padre,Comedy,2012,67
-#0000E,Celeste & Jesse Forever,Comedy,2012,133
-#0000F,Chasing Mavericks,Drama,2012,76
-#00010,Chernobyl Diaries,Horror,2012,74
-#00011,Cirque du Soleil: Worlds Away,Drama,2012,95
-#00012,Cloud Atlas,Drama,2012,100
-#00013,Contraband,Action,2012,91
-#00014,Diary of a Wimpy Kid: Dog Days,Adventure,2012,160
-#00015,Dredd,Action,2012,138
-#00016,Flight,Drama,2012,162
-#00017,For Greater Glory: The True Story of Cristiada,Action,2012,165
-#00018,Frankenweenie,Adventure,2012,109
-#00019,Fun Size,Comedy,2012,93
-#0001A,Ghost Rider: Spirit of Vengeance,Action,2012,134
-#0001B,Here Comes the Boom,Comedy,2012,139
-#0001C,Hope Springs,Romantic Comedy,2012,160
-#0001D,Hotel Transylvania,Adventure,2012,80
+﻿IdMovie;Movie;Genre;Year;Duracion
+0;2016: Obama's America;Documentary;2012;61
+1;21 Jump Street;Comedy;2012;74
+2;Abraham Lincoln: Vampire Hunter;Horror;2012;144
+3;Act of Valor;Action;2012;142
+4;Albert Nobbs;Drama;2012;144
+5;American Reunion;Comedy;2012;106
+6;Amour;Drama;2012;77
+7;Anna Karenina;Drama;2012;60
+8;Barfi!;Comedy;2012;113
+9;Battleship;Action;2012;115
+10;Beasts of the Southern Wild;Drama;2012;153
+11;Big Miracle;Drama;2012;143
+12;Brave;Adventure;2012;118
+13;Casa de mi Padre;Comedy;2012;147
+14;Celeste & Jesse Forever;Comedy;2012;74
+15;Chasing Mavericks;Drama;2012;115
+16;Chernobyl Diaries;Horror;2012;91
+17;Cirque du Soleil: Worlds Away;Drama;2012;122
+18;Cloud Atlas;Drama;2012;133
+19;Contraband;Action;2012;112
+20;Diary of a Wimpy Kid: Dog Days;Adventure;2012;120
+21;Dredd;Action;2012;122
+22;Flight;Drama;2012;100
+23;For Greater Glory: The True Story of Cristiada;Action;2012;130
+24;Frankenweenie;Adventure;2012;94
+25;Fun Size;Comedy;2012;91
+26;Ghost Rider: Spirit of Vengeance;Action;2012;132
+27;Here Comes the Boom;Comedy;2012;62
+28;Hope Springs;Romantic Comedy;2012;162
+29;Hotel Transylvania;Adventure;2012;76
+30;House at the End of the Street;Horror;2012;134
+31;Ice Age: Continental Drift;Adventure;2012;88
+32;Jab Tak Hai Jaan;Drama;2012;116
+33;Jack Reacher;Drama;2012;160
+34;Jeff, Who Lives at Home;Comedy;2012;96
+35;John Carter;Adventure;2012;97
+36;Journey 2: The Mysterious Island;Adventure;2012;167
+37;Joyful Noise;Musical;2012;93
+38;Lawless;Drama;2012;139
+39;Les Misérables;Musical;2012;83
+40;Life of Pi;Drama;2012;123
+41;Lincoln;Drama;2012;159
+42;Looper;Action;2012;122
+43;Madagascar 3: Europe's Most Wanted;Adventure;2012;84
+44;Magic Mike;Comedy;2012;143
+45;Men in Black 3;Adventure;2012;111
+46;Mirror Mirror;Adventure;2012;87
+47;Moonrise Kingdom;Drama;2012;137
+48;One for the Money;Comedy;2012;156
+49;Paranormal Activity 4;Horror;2012;137
+50;ParaNorman;Adventure;2012;110
+51;Parental Guidance;Adventure;2012;97
+52;People Like Us;Drama;2012;119
+53;Pitch Perfect;Comedy;2012;165
+54;Project X;Comedy;2012;70
+55;Prometheus;Adventure;2012;123
+56;Promised Land;Drama;2012;62
+57;Red Dawn;Action;2012;144
+58;Red Tails;Action;2012;71
+59;Resident Evil: Retribution;Action;2012;124
+60;Rise of the Guardians;Adventure;2012;69
+61;Robot & Frank;Drama;2012;164
+62;Rock of Ages;Musical;2012;169
+63;Safe;Action;2012;104
+64;Safety Not Guaranteed;Comedy;2012;147
+65;Salmon Fishing in the Yemen;Drama;2012;63
+66;Samsara;Documentary;2012;61
+67;Seeking a Friend for the End of the World;Comedy;2012;125
+68;Seven Psychopaths;Comedy;2012;78
+69;Silent House;Horror;2012;133
+70;Silver Linings Playbook;Drama;2012;161
+71;Sinister;Horror;2012;61
+72;Skyfall;Action;2012;79
+73;Snow White and the Huntsman;Adventure;2012;95
+74;Sparkle;Drama;2012;150
+75;Step Up Revolution;Drama;2012;155
+76;Ted;Adventure;2012;167
+77;That's My Boy;Comedy;2012;125
+78;The Amazing Spider-Man;Adventure;2012;133
+79;The Apparition;Horror;2012;158
+80;The Avengers;Action;2012;104
+81;The Best Exotic Marigold Hotel;Comedy;2012;63
+82;The Campaign;Comedy;2012;83
+83;The Collection;Horror;2012;71
+84;The Dark Knight Rises;Action;2012;100
+85;The Devil Inside;Horror;2012;85
+86;The Dictator;Comedy;2012;127
+87;The Expendables 2;Action;2012;75
+88;The Five-Year Engagement;Romantic Comedy;2012;121
+89;The Guilt Trip;Comedy;2012;170
+90;The Hobbit: An Unexpected Journey;Adventure;2012;140
+91;The Impossible;Drama;2012;145
+92;The Lucky One;Drama;2012;152
+93;The Man with the Iron Fists;Action;2012;153
+94;The Master;Drama;2012;68
+95;The Odd Life of Timothy Green;Drama;2012;70
+96;The Oogieloves in the Big Balloon Adventure;Drama;2012;135
+97;The Perks of Being a Wallflower;Drama;2012;84
+98;The Pirates! Band of Misfits;Adventure;2012;85
+99;The Possession;Horror;2012;122
+100;The Sessions;Drama;2012;89
+101;The Three Stooges;Adventure;2012;117
+102;The Twilight Saga: Breaking Dawn - Part 2;Drama;2012;117
+103;The Vow;Drama;2012;71
+104;The Watch;Comedy;2012;88
+105;The Words;Drama;2012;139
+106;Think Like a Man;Romantic Comedy;2012;120
+107;This Is 40;Comedy;2012;66
+108;This Means War;Romantic Comedy;2012;146
+109;To Rome with Love;Romantic Comedy;2012;159
+110;Total Recall;Action;2012;130
+111;Trouble with the Curve;Drama;2012;74
+112;Wanderlust;Comedy;2012;130
+113;What to Expect When You're Expecting;Romantic Comedy;2012;104
+114;Won't Back Down;Drama;2012;139
+115;Wrath of the Titans;Adventure;2012;166
+116;Wreck-It Ralph;Adventure;2012;141
+117;Zero Dark Thirty;Drama;2012;62
+118;42;Drama;2013;100
+119;12 Years a Slave;Drama;2013;150
+120;2 Guns;Action;2013;80
+121;20 Feet from Stardom;Documentary;2013;125
+122;21 & Over;Comedy;2013;126
+123;47 Ronin;Action;2013;87
+124;A Good Day to Die Hard;Action;2013;147
+125;A Haunted House;Comedy;2013;112
+126;About Time;Romantic Comedy;2013;159
+127;Admission;Romantic Comedy;2013;110
+128;After Earth;Action;2013;79
+129;Anchorman 2: The Legend Continues;Comedy;2013;165
+130;Austenland;Romantic Comedy;2013;122
+131;Bad Grandpa;Comedy;2013;165
+132;Baggage Claim;Romantic Comedy;2013;159
+133;Battle of the Year;Drama;2013;90
+134;Before Midnight;Drama;2013;164
+135;Black Nativity;Musical;2013;77
+136;Blue Is the Warmest Color;Drama;2013;157
+137;Blue Jasmine;Comedy;2013;168
+138;Bullet to the Head;Action;2013;170
+139;Captain Phillips;Drama;2013;124
+140;Carrie;Horror;2013;78
+141;Cloudy with a Chance of Meatballs 2;Adventure;2013;135
+142;Dallas Buyers Club;Drama;2013;137
+143;Dark Skies;Horror;2013;148
+144;Delivery Man;Comedy;2013;144
+145;Despicable Me 2;Adventure;2013;63
+146;Don Jon;Romantic Comedy;2013;129
+147;Elysium;Action;2013;168
+148;Ender's Game;Adventure;2013;134
+149;Enough Said;Comedy;2013;111
+150;Epic;Adventure;2013;142
+151;Escape from Planet Earth;Adventure;2013;142
+152;Evil Dead;Horror;2013;126
+153;Fast & Furious 6;Action;2013;136
+154;Filly Brown;Drama;2013;128
+155;Frances Ha;Comedy;2013;78
+156;Free Birds;Adventure;2013;108
+157;Frozen;Musical;2013;84
+158;Fruitvale Station;Drama;2013;87
+159;G.I. Joe: Retaliation;Action;2013;92
+160;Gangster Squad;Drama;2013;166
+161;Girl Most Likely;Comedy;2013;67
+162;Grace Unplugged;Drama;2013;136
+163;Grown Ups 2;Comedy;2013;60
+164;Grudge Match;Comedy;2013;63
+165;Hansel & Gretel: Witch Hunters;Action;2013;139
+166;Her;Drama;2013;125
+167;Home Run;Drama;2013;66
+168;Homefront;Action;2013;92
+169;Identity Thief;Comedy;2013;111
+170;In a World...;Comedy;2013;103
+171;Inside Llewyn Davis;Drama;2013;69
+172;Insidious: Chapter 2;Horror;2013;100
+173;Iron Man 3;Action;2013;112
+174;Jack the Giant Slayer;Adventure;2013;93
+175;Jobs;Drama;2013;166
+176;Kick-Ass 2;Action;2013;158
+177;Last Vegas;Comedy;2013;60
+178;Lee Daniels' The Butler;Drama;2013;60
+179;Lone Survivor;Action;2013;170
+180;Love Is All You Need;Drama;2013;118
+181;Machete Kills;Action;2013;110
+182;Mama;Horror;2013;111
+183;Man of Steel;Action;2013;114
+184;Mandela: Long Walk to Freedom;Drama;2013;164
+185;Monsters University;Adventure;2013;133
+186;Movie 43;Comedy;2013;91
+187;Mud;Drama;2013;93
+188;Nebraska;Drama;2013;98
+189;Oldboy;Action;2013;126
+190;Out of the Furnace;Drama;2013;101
+191;Oz the Great and Powerful;Adventure;2013;147
+192;Pacific Rim;Action;2013;70
+193;Pain & Gain;Action;2013;112
+194;Peeples;Romantic Comedy;2013;170
+195;Percy Jackson: Sea of Monsters;Adventure;2013;67
+196;Philomena;Drama;2013;62
+197;Planes;Adventure;2013;87
+198;Quartet;Comedy;2013;99
+199;R.I.P.D.;Action;2013;75
+200;RED 2;Action;2013;135
+201;Renoir;Drama;2013;137
+202;Riddick;Action;2013;126
+203;Rush;Drama;2013;158
+204;Safe Haven;Drama;2013;111
+205;Saving Mr. Banks;Drama;2013;79
+206;Scary Movie 5;Comedy;2013;69
+207;Stand Up Guys;Drama;2013;164
+208;Star Trek Into Darkness;Adventure;2013;74
+209;Stoker;Drama;2013;88
+210;Texas Chainsaw;Horror;2013;75
+211;The Best Man Holiday;Comedy;2013;78
+212;The Big Wedding;Romantic Comedy;2013;170
+213;The Bling Ring;Drama;2013;130
+214;The Book Thief;Drama;2013;122
+215;The Christmas Candle;Adventure;2013;148
+216;The Conjuring;Horror;2013;121
+217;The Croods;Adventure;2013;111
+218;The East;Drama;2013;153
+219;The Fifth Estate;Drama;2013;118
+220;The Gatekeepers;Documentary;2013;167
+221;The Great Gatsby;Drama;2013;125
+222;The Hangover Part III;Comedy;2013;145
+223;The Heat;Comedy;2013;106
+224;The Hobbit: The Desolation of Smaug;Adventure;2013;128
+225;The Hunger Games: Catching Fire;Adventure;2013;87
+226;The Iceman;Drama;2013;163
+227;The Incredible Burt Wonderstone;Comedy;2013;109
+228;The Internship;Comedy;2013;166
+229;The Kings of Summer;Comedy;2013;65
+230;The Last Exorcism Part II;Horror;2013;159
+231;The Last Stand;Action;2013;69
+232;The Lords of Salem;Horror;2013;160
+233;The Mortal Instruments: City of Bones;Adventure;2013;88
+234;The Place Beyond the Pines;Drama;2013;61
+235;The Sapphires;Musical;2013;141
+236;The Secret Life of Walter Mitty;Adventure;2013;84
+237;The Smurfs 2;Adventure;2013;168
+238;The Spectacular Now;Drama;2013;122
+239;The To Do List;Comedy;2013;162
+240;The Way Way Back;Comedy;2013;162
+241;The Wolverine;Action;2013;150
+242;The World's End;Comedy;2013;152
+243;This Is the End;Comedy;2013;86
+244;Thor: The Dark World;Action;2013;102
+245;Turbo;Adventure;2013;166
+246;Walking with Dinosaurs;Adventure;2013;103
+247;Warm Bodies;Romantic Comedy;2013;130
+248;We're the Millers;Comedy;2013;71
+249;World War Z;Action;2013;124
+250;You're Next;Horror;2013;157
+251;22 Jump Street;Comedy;2014;62
+252;300: Rise of an Empire;Action;2014;109
+253;50 to 1;Drama;2014;74
+254;A Haunted House 2;Comedy;2014;146
+255;A Million Ways to Die in the West;Comedy;2014;97
+256;A Most Violent Year;Drama;2014;158
+257;A Walk Among the Tombstones;Action;2014;170
+258;About Last Night;Romantic Comedy;2014;134
+259;Addicted;Drama;2014;154
+260;Alexander and the Terrible, Horrible, No Good, Very Bad Day;Adventure;2014;82
+261;American Sniper;Drama;2014;131
+262;And So It Goes;Comedy;2014;80
+263;Annabelle;Horror;2014;140
+264;Annie;Musical;2014;81
+265;Bad Words;Comedy;2014;165
+266;Begin Again;Drama;2014;130
+267;Beyond the Lights;Drama;2014;164
+268;Big Eyes;Drama;2014;100
+269;Big Hero 6;Adventure;2014;168
+270;Blended;Romantic Comedy;2014;127
+271;Boyhood;Drama;2014;123
+272;Brick Mansions;Action;2014;106
+273;Captain America: The Winter Soldier;Action;2014;126
+274;Dawn of the Planet of the Apes;Adventure;2014;117
+275;Dear White People;Comedy;2014;123
+276;Deliver Us from Evil;Horror;2014;153
+277;Devil's Due;Horror;2014;67
+278;Divergent;Adventure;2014;96
+279;Dolphin Tale 2;Drama;2014;152
+280;Dracula Untold;Action;2014;87
+281;Draft Day;Drama;2014;141
+282;Dumb and Dumber To;Comedy;2014;60
+283;Earth to Echo;Adventure;2014;64
+284;Edge of Tomorrow;Action;2014;78
+285;Endless Love;Drama;2014;160
+286;Exodus: Gods and Kings;Drama;2014;135
+287;Foxcatcher;Drama;2014;98
+288;Fury;Drama;2014;138
+289;Get on Up;Drama;2014;118
+290;God's Not Dead;Drama;2014;140
+291;Godzilla;Action;2014;168
+292;Guardians of the Galaxy;Action;2014;86
+293;Heaven Is for Real;Drama;2014;130
+294;Hercules;Action;2014;113
+295;Horrible Bosses 2;Comedy;2014;79
+296;How to Train Your Dragon 2;Adventure;2014;79
+297;I, Frankenstein;Action;2014;144
+298;Ida;Drama;2014;145
+299;If I Stay;Drama;2014;89
+300;Inherent Vice;Drama;2014;94
+301;Interstellar;Adventure;2014;115
+302;Into the Woods;Musical;2014;111
+303;Jack Ryan: Shadow Recruit;Action;2014;80
+304;Jersey Boys;Drama;2014;143
+305;John Wick;Action;2014;99
+306;Labor Day;Drama;2014;73
+307;Legends of Oz: Dorothy's Return;Adventure;2014;103
+308;Let's Be Cops;Comedy;2014;80
+309;Lucy;Action;2014;151
+310;Maleficent;Adventure;2014;152
+311;Meet the Mormons;Documentary;2014;86
+312;Million Dollar Arm;Drama;2014;86
+313;Mommy;Drama;2014;109
+314;Moms' Night Out;Adventure;2014;158
+315;Mr. Peabody & Sherman;Adventure;2014;142
+316;Mr. Turner;Drama;2014;161
+317;Muppets Most Wanted;Adventure;2014;119
+318;Need for Speed;Action;2014;93
+319;Neighbors;Comedy;2014;114
+320;Night at the Museum: Secret of the Tomb;Adventure;2014;79
+321;Noah;Drama;2014;96
+322;Non-Stop;Action;2014;124
+323;Obvious Child;Romantic Comedy;2014;65
+324;Oculus;Horror;2014;93
+325;Ouija;Horror;2014;104
+326;Paranormal Activity: The Marked Ones;Horror;2014;100
+327;Penguins of Madagascar;Adventure;2014;90
+328;Planes: Fire & Rescue;Adventure;2014;68
+329;Pompeii;Drama;2014;137
+330;Ride Along;Comedy;2014;145
+331;Rio 2;Adventure;2014;61
+332;RoboCop;Action;2014;114
+333;Rosewater;Drama;2014;140
+334;Sabotage;Action;2014;118
+335;Selma;Drama;2014;102
+336;Sex Tape;Comedy;2014;134
+337;Sin City: A Dame to Kill For;Action;2014;139
+338;Son of God;Drama;2014;63
+339;St. Vincent;Comedy;2014;129
+340;Tammy;Comedy;2014;112
+341;Teenage Mutant Ninja Turtles;Adventure;2014;72
+342;That Awkward Moment;Romantic Comedy;2014;77
+343;The Amazing Spider-Man 2;Action;2014;166
+344;The Best of Me;Drama;2014;132
+345;The Book of Life;Adventure;2014;80
+346;The Boxtrolls;Adventure;2014;125
+347;The Drop;Drama;2014;116
+348;The Equalizer;Action;2014;146
+349;The Expendables 3;Action;2014;78
+350;The Fault in Our Stars;Drama;2014;99
+351;The Gambler;Drama;2014;82
+352;The Giver;Drama;2014;166
+353;The Grand Budapest Hotel;Comedy;2014;94
+354;The Hobbit: The Battle of the Five Armies;Adventure;2014;142
+355;The Hundred-Foot Journey;Romantic Comedy;2014;77
+356;The Imitation Game;Drama;2014;159
+357;The Immigrant;Drama;2014;126
+358;The Interview;Comedy;2014;98
+359;The Judge;Drama;2014;74
+360;The Legend of Hercules;Adventure;2014;106
+361;The Lego Movie;Adventure;2014;151
+362;The Monuments Men;Drama;2014;123
+363;The Nut Job;Adventure;2014;64
+364;The Other Woman;Comedy;2014;161
+365;The Railway Man;Drama;2014;68
+366;The Rover;Drama;2014;103
+367;The Skeleton Twins;Drama;2014;144
+368;The Theory of Everything;Drama;2014;122
+369;Think Like a Man Too;Romantic Comedy;2014;158
+370;This Is Where I Leave You;Comedy;2014;105
+371;Top Five;Comedy;2014;118
+372;Transformers: Age of Extinction;Action;2014;72
+373;Tusk;Horror;2014;81
+374;Unbroken;Drama;2014;125
+375;Veronica Mars;Drama;2014;153
+376;When the Game Stands Tall;Drama;2014;89
+377;Whiplash;Drama;2014;108
+378;Wild;Drama;2014;154
+379;Winter's Tale;Drama;2014;100
+380;Wish I Was Here;Comedy;2014;72
+381;X-Men: Days of Future Past;Action;2014;119
+382;90 Minutes in Heaven;Drama;2015;141
+383;A Walk in the Woods;Adventure;2015;83
+384;Aloha;Drama;2015;153
+385;Alvin and the Chipmunks: The Road Chip;Adventure;2015;155
+386;Anomalisa;Adventure;2016;130
+387;Ant-Man;Action;2015;92
+388;Avengers: Age of Ultron;Action;2015;124
+389;Baahubali: The Beginning;Action;2015;116
+390;Bajrangi Bhaijaan;Action;2015;94
+391;Black Mass;Drama;2015;147
+392;Black or White;Drama;2015;78
+393;Brooklyn;Drama;2015;127
+394;Burnt;Comedy;2015;157
+395;Captive;Drama;2015;143
+396;Carol;Drama;2015;84
+397;Chappie;Action;2015;168
+398;Cinderella;Drama;2015;83
+399;Concussion;Drama;2015;123
+400;Creed;Drama;2015;164
+401;Crimson Peak;Horror;2015;74
+402;Daddy's Home;Comedy;2015;113
+403;Danny Collins;Comedy;2015;159
+404;Do You Believe?;Drama;2015;76
+405;Dope;Comedy;2015;144
+406;Entourage;Comedy;2015;90
+407;Fantastic Four;Action;2015;137
+408;Fifty Shades of Grey;Drama;2015;126
+409;Focus;Romantic Comedy;2015;85
+410;Furious 7;Action;2015;124
+411;Get Hard;Comedy;2015;105
+412;Goosebumps;Horror;2015;100
+413;Hitman: Agent 47;Action;2015;100
+414;Home;Adventure;2015;131
+415;Hot Pursuit;Comedy;2015;163
+416;Hot Tub Time Machine 2;Comedy;2015;152
+417;Hotel Transylvania 2;Adventure;2015;155
+418;In the Heart of the Sea;Adventure;2015;153
+419;Inside Out;Adventure;2015;64
+420;Insidious: Chapter 3;Horror;2015;112
+421;Insurgent;Action;2015;85
+422;It Follows;Horror;2015;97
+423;Jem and the Holograms;Musical;2015;113
+424;Joy;Drama;2015;79
+425;Jupiter Ascending;Action;2015;91
+426;Jurassic World;Action;2015;161
+427;Kingsman: The Secret Service;Action;2015;134
+428;Little Boy;Drama;2015;164
+429;Love the Coopers;Comedy;2015;72
+430;Mad Max: Fury Road;Action;2015;169
+431;Magic Mike XXL;Comedy;2015;87
+432;Max;Adventure;2015;158
+433;McFarland, USA;Drama;2015;94
+434;Me and Earl and the Dying Girl;Drama;2015;130
+435;Minions;Adventure;2015;95
+436;Mission: Impossible - Rogue Nation;Action;2015;153
+437;Mortdecai;Adventure;2015;104
+438;My All-American;Drama;2015;130
+439;Our Brand Is Crisis;Drama;2015;160
+440;Pan;Adventure;2015;80
+441;Paper Towns;Drama;2015;127
+442;Paranormal Activity: The Ghost Dimension;Horror;2015;166
+443;Paul Blart: Mall Cop 2;Adventure;2015;101
+444;Pitch Perfect 2;Comedy;2015;167
+445;Pixels;Adventure;2015;135
+446;Point Break;Action;2015;124
+447;Poltergeist;Horror;2015;166
+448;Project Almanac;Adventure;2015;85
+449;Ricki and the Flash;Drama;2015;133
+450;Rock the Kasbah;Comedy;2015;93
+451;Room;Drama;2015;155
+452;Run All Night;Action;2015;136
+453;San Andreas;Adventure;2015;69
+454;Scouts Guide to the Zombie Apocalypse;Comedy;2015;94
+455;Seventh Son;Adventure;2015;134
+456;Shaun the Sheep Movie;Adventure;2015;73
+457;Sinister 2;Horror;2015;111
+458;Sisters;Comedy;2015;81
+459;Southpaw;Drama;2015;169
+460;Spectre;Action;2015;150
+461;Spotlight;Drama;2015;126
+462;Spy!;Comedy;2015;84
+463;Star Wars: Episode VII - The Force Awakens;Adventure;2015;168
+464;Steve Jobs;Drama;2015;156
+465;Still Alice;Drama;2015;99
+466;Straight Outta Compton;Drama;2015;82
+467;Suffragette;Drama;2014;145
+468;Taken 3;Action;2015;136
+469;Ted 2;Comedy;2015;64
+470;Terminator Genisys;Action;2015;138
+471;Testament of Youth;Drama;2015;106
+472;The 33;Drama;2015;65
+473;The Age of Adaline;Drama;2015;83
+474;The Big Short;Drama;2015;113
+475;The Diary of a Teenage Girl;Drama;2015;115
+476;The Duff;Comedy;2015;89
+477;The Good Dinosaur;Adventure;2015;123
+478;The Green Inferno;Horror;2015;167
+479;The Intern;Comedy;2015;88
+480;The Last Witch Hunter;Action;2015;70
+481;The Lazarus Effect;Horror;2015;76
+482;The Longest Ride;Drama;2015;122
+483;The Man from U.N.C.L.E.;Action;2015;95
+484;The Night Before;Comedy;2015;133
+485;The Peanuts Movie;Adventure;2015;80
+486;The Revenant;Adventure;2015;152
+487;The Second Best Exotic Marigold Hotel;Comedy;2015;167
+488;The SpongeBob Movie: Sponge Out of Water;Adventure;2015;158
+489;The Transporter Refueled;Action;2015;167
+490;The Vatican Tapes;Horror;2015;66
+491;The Walk;Drama;2015;89
+492;The Water Diviner;Drama;2015;141
+493;The Wedding Ringer;Comedy;2015;153
+494;Tomorrowland;Adventure;2015;85
+495;Trainwreck;Comedy;2015;169
+496;Unfinished Business;Comedy;2015;119
+497;Unfriended;Horror;2015;151
+498;Vacation;Comedy;2015;123
+499;War Room;Drama;2015;67
+500;We Are Your Friends;Drama;2015;97
+501;While We're Young;Comedy;2015;144
+502;Woman in Gold;Drama;2015;139
+503;Woodlawn;Drama;2015;98
+504;Youth;Drama;2015;148
+505;13 Hours: The Secret Soldiers of Benghazi;Drama;2016;60
+506;A Hologram for the King;Drama;2016;100
+507;A Monster Calls;Drama;2016;130
+508;Alice Through the Looking Glass;Adventure;2016;159
+509;Allegiant;Action;2016;145
+510;Allied;Drama;2016;92
+511;Almost Christmas;Drama;2016;153
+512;Arrival;Drama;2016;83
+513;Assassin's Creed;Action;2016;149
+514;Bad Moms;Comedy;2016;131
+515;Bad Santa 2;Comedy;2016;70
+516;Barbershop: The Next Cut;Comedy;2016;157
+517;Batman v Superman: Dawn of Justice;Action;2016;125
+518;Ben-Hur;Drama;2016;75
+519;Blair Witch;Horror;2016;90
+520;Bleed for This;Drama;2016;81
+521;Bridget Jones's Baby;Romantic Comedy;2016;155
+522;Café Society;Drama;2016;160
+523;Captain America: Civil War;Action;2016;166
+524;Captain Fantastic;Drama;2016;99
+525;Central Intelligence;Comedy;2016;105
+526;Collateral Beauty;Drama;2016;68
+527;Compadres;Comedy;2016;111
+528;Criminal;Action;2016;69
+529;Dangal;Action;2016;169
+530;Deadpool;Action;2016;91
+531;Deepwater Horizon;Drama;2016;134
+532;Denial;Drama;2016;94
+533;Dirty Grandpa;Comedy;2016;133
+534;Doctor Strange;Action;2016;170
+535;Don't Breathe;Horror;2016;77
+536;Don't Think Twice;Comedy;2016;133
+537;Eddie the Eagle;Drama;2016;165
+538;Elle;Drama;2016;71
+539;Everybody Wants Some!!;Comedy;2016;86
+540;Fantastic Beasts and Where to Find Them;Adventure;2016;120
+541;Fences;Drama;2016;122
+542;Fifty Shades of Black;Comedy;2016;117
+543;Finding Dory;Adventure;2016;124
+544;Florence Foster Jenkins;Drama;2016;88
+545;Free State of Jones;Drama;2016;144
+546;Ghostbusters;Comedy;2016;162
+547;God's Not Dead 2;Drama;2016;131
+548;Gods of Egypt;Adventure;2016;138
+549;Greater;Drama;2016;102
+550;Green Room;Horror;2016;79
+551;Hacksaw Ridge;Drama;2016;154
+552;Hail, Caesar!;Comedy;2016;131
+553;Hands of Stone;Drama;2016;71
+554;Hardcore Henry;Action;2016;159
+555;Hello, My Name Is Doris;Drama;2016;127
+556;Hidden Figures;Drama;2016;162
+557;Hillary's America: The Secret History of the Democratic Party;Documentary;2016;92
+558;Hillsong: Let Hope Rise;Documentary;2016;126
+559;How to Be Single;Romantic Comedy;2016;94
+560;Hunt for the Wilderpeople;Comedy;2016;157
+561;Ice Age: Collision Course;Adventure;2016;139
+562;I'm Not Ashamed;Drama;2016;160
+563;Incarnate;Horror;2016;160
+564;Independence Day: Resurgence;Action;2016;77
+565;Jack Reacher: Never Go Back;Action;2016;61
+566;Jackie;Drama;2016;84
+567;Jason Bourne;Action;2016;93
+568;Keanu;Comedy;2016;74
+569;Keeping Up with the Joneses;Comedy;2016;148
+570;Kubo and the Two Strings;Adventure;2016;112
+571;Kung Fu Panda 3;Adventure;2016;166
+572;La La Land;Musical;2016;146
+573;Lights Out;Horror;2016;89
+574;Lion;Drama;2016;160
+575;Live by Night;Drama;2016;90
+576;Loving;Drama;2016;143
+577;Manchester by the Sea;Drama;2016;95
+578;Max Steel;Action;2016;96
+579;Me Before You;Drama;2016;84
+580;Mechanic: Resurrection;Action;2016;154
+581;Meet the Blacks;Comedy;2016;120
+582;Mei ren yu;Romantic Comedy;2016;155
+583;Middle School: The Worst Years of My Life;Adventure;2016;75
+584;Midnight Special;Drama;2016;160
+585;Mike and Dave Need Wedding Dates;Comedy;2016;119
+586;Miracles from Heaven;Drama;2016;87
+587;Miss Peregrine's Home for Peculiar Children;Adventure;2016;98
+588;Miss Sloane;Drama;2016;136
+589;Moana;Musical;2016;107
+590;Moonlight;Drama;2016;93
+591;Mother's Day;Romantic Comedy;2016;160
+592;My Big Fat Greek Wedding 2;Comedy;2016;68
+593;Neighbors 2: Sorority Rising;Comedy;2016;95
+594;Nine Lives;Adventure;2016;72
+595;Norm of the North;Adventure;2016;60
+596;Office Christmas Party;Comedy;2016;115
+597;Ouija: Origin of Evil;Horror;2016;142
+598;Paterson;Comedy;2016;65
+599;Pete's Dragon;Adventure;2016;91
+600;Popstar: Never Stop Never Stopping;Comedy;2016;168
+601;Queen of Katwe;Drama;2016;131
+602;Race;Drama;2016;147
+603;Ratchet and Clank;Adventure;2016;75
+604;Ride Along 2;Comedy;2016;135
+605;Risen;Drama;2016;164
+606;Rogue One: A Star Wars Story;Adventure;2016;115
+607;Rules Don't Apply;Romantic Comedy;2016;162
+608;Sausage Party;Comedy;2016;150
+609;Silence;Drama;2016;147
+610;Sing;Adventure;2016;95
+611;Snowden;Drama;2015;91
+612;Star Trek Beyond;Adventure;2016;81
+613;Storks;Adventure;2016;81
+614;Suicide Squad;Action;2016;132
+615;Sully;Drama;2016;166
+616;Sultan;Action;2016;168
+617;Swiss Army Man;Drama;2016;76
+618;Teenage Mutant Ninja Turtles: Out of the Shadows;Adventure;2016;67
+619;The 5th Wave;Action;2016;69
+620;The Angry Birds Movie;Adventure;2016;134
+621;The BFG;Adventure;2016;162
+622;The Birth of a Nation;Drama;2016;70
+623;The Boss;Comedy;2016;133
+624;The Brothers Grimsby;Comedy;2016;130
+625;The Conjuring 2;Horror;2016;159
+626;The Darkness;Horror;2016;130
+627;The Disappointments Room;Horror;2016;154
+628;The Dressmaker;Drama;2015;144
+629;The Edge of Seventeen;Drama;2016;117
+630;The Huntsman: Winter's War;Action;2016;79
+631;The Jungle Book;Adventure;2016;155
+632;The Legend of Tarzan;Adventure;2016;155
+633;The Light Between Oceans;Drama;2016;113
+634;The Man Who Knew Infinity;Drama;2016;145
+635;The Other Side of the Door;Horror;2016;104
+636;The Perfect Match;Romantic Comedy;2016;140
+637;The Purge: Election Year;Horror;2016;82
+638;The Secret Life of Pets;Adventure;2016;116
+639;The Shallows;Drama;2016;162
+640;The Witch;Horror;2016;85
+641;The Young Messiah;Drama;2016;149
+642;Trolls;Adventure;2016;78
+643;Tyler Perry's Boo! A Madea Halloween;Comedy;2016;103
+644;War Dogs;Comedy;2016;116
+645;Warcraft;Action;2016;77
+646;Whiskey Tango Foxtrot;Comedy;2016;106
+647;Why Him?;Comedy;2016;140
+648;X-Men: Apocalypse;Action;2016;115
+649;Zoolander 2;Comedy;2016;143
+650;Zootopia;Adventure;2016;97
+651;47 Meters Down;Horror;2017;130
+652;A Bad Moms Christmas;Comedy;2017;162
+653;A Dog's Purpose;Drama;2017;74
+654;Alien: Covenant;Horror;2017;121
+655;All Eyez on Me;Drama;2017;60
+656;All Saints;Drama;2017;154
+657;An Inconvenient Sequel: Truth to Power;Documentary;2017;78
+658;Annabelle: Creation;Horror;2017;167
+659;Baahubali 2: The Conclusion;Action;2017;66
+660;Battle of the Sexes;Drama;2017;112
+661;Baywatch;Comedy;2017;87
+662;Beauty and the Beast;Musical;2017;122
+663;Before I Fall;Drama;2017;169
+664;Birth of the Dragon;Action;2017;102
+665;Boo 2! A Madea Halloween;Comedy;2017;161
+666;Captain Underpants: The First Epic Movie;Adventure;2017;164
+667;Cars 3;Adventure;2017;123
+668;CHIPS;Action;2017;144
+669;Coco;Musical;2017;160
+670;Collide;Action;2016;84
+671;Daddy's Home 2;Comedy;2017;106
+672;Darkest Hour;Drama;2017;118
+673;Despicable Me 3;Adventure;2017;155
+674;Detroit;Drama;2017;112
+675;Diary of a Wimpy Kid: The Long Haul;Adventure;2017;80
+676;Downsizing;Comedy;2017;81
+677;Dunkirk;Action;2017;115
+678;Everything, Everything;Drama;2017;133
+679;Father Figures;Comedy;2017;151
+680;Ferdinand;Adventure;2017;80
+681;Fifty Shades Darker;Drama;2017;110
+682;Fist Fight;Comedy;2017;114
+683;Free Fire;Action;2017;71
+684;Geostorm;Action;2017;134
+685;Get Out;Horror;2017;164
+686;Ghost in the Shell;Action;2017;124
+687;Gifted;Drama;2017;81
+688;Girls Trip;Comedy;2017;72
+689;Going in Style;Comedy;2017;81
+690;Guardians of the Galaxy Vol. 2;Action;2017;108
+691;Happy Death Day;Horror;2017;155
+692;Home Again;Romantic Comedy;2017;67
+693;How to Be a Latin Lover;Comedy;2017;122
+694;I Am Not Your Negro;Documentary;2017;157
+695;It;Horror;2017;142
+696;It Comes At Night;Horror;2017;161
+697;Jigsaw;Horror;2017;121
+698;Jumanji: Welcome to the Jungle;Adventure;2017;67
+699;Just Getting Started;Comedy;2017;63
+700;Justice League;Action;2017;107
+701;King Arthur: Legend of the Sword;Adventure;2017;89
+702;Kingsman: The Golden Circle;Action;2017;170
+703;Kong: Skull Island;Adventure;2017;158
+704;Lady Bird;Drama;2017;116
+705;LBJ;Drama;2017;84
+706;Let There Be Light;Drama;2017;140
+707;Life;Drama;2017;68
+708;Logan;Action;2017;106
+709;Logan Lucky;Comedy;2017;170
+710;Loving Vincent;Drama;2017;136
+711;Lowriders;Drama;2017;155
+712;Marshall;Drama;2017;78
+713;Molly's Game;Drama;2017;101
+714;Monster Trucks;Adventure;2017;94
+715;Murder on the Orient Express;Drama;2017;158
+716;My Little Pony: The Movie;Adventure;2017;170
+717;Only The Brave;Drama;2017;122
+718;Phantom Thread;Drama;2017;160
+719;Pirates of the Caribbean: Dead Men Tell No Tales;Adventure;2017;95
+720;Pitch Perfect 3;Comedy;2017;142
+721;Power Rangers;Action;2017;65
+722;Resident Evil: The Final Chapter;Action;2017;165
+723;Rings;Horror;2017;121
+724;Rock Dog;Adventure;2017;135
+725;Roman J. Israel, Esq.;Drama;2017;146
+726;Same Kind of Different as Me;Drama;2017;72
+727;Smurfs: The Lost Village;Adventure;2017;132
+728;Snatched;Comedy;2017;108
+729;Spider-Man: Homecoming;Action;2017;170
+730;Split;Horror;2017;133
+731;Star Wars: Episode VIII - The Last Jedi;Adventure;2017;112
+732;Stronger;Drama;2017;104
+733;T2 Trainspotting;Drama;2017;118
+734;Table 19;Comedy;2017;160
+735;Thank You for Your Service;Drama;2017;82
+736;The Belko Experiment;Horror;2017;63
+737;The Big Sick;Romantic Comedy;2017;110
+738;The Boss Baby;Adventure;2017;82
+739;The Disaster Artist;Comedy;2017;86
+740;The Emoji Movie;Adventure;2017;110
+741;The Fate of the Furious;Action;2017;124
+742;The Florida Project;Drama;2017;102
+743;The Foreigner;Action;2017;119
+744;The Founder;Drama;2016;70
+745;The Great Wall;Action;2017;116
+746;The Greatest Showman;Musical;2017;90
+747;The Hitman's Bodyguard;Action;2017;165
+748;The House;Comedy;2017;124
+749;The Lego Batman Movie;Adventure;2017;82
+750;The Lego Ninjago Movie;Adventure;2017;63
+751;The Lost City of Z;Action;2017;100
+752;The Mummy;Adventure;2017;64
+753;The Nut Job 2: Nutty by Nature;Adventure;2017;73
+754;The Post;Drama;2017;148
+755;The Promise;Drama;2017;73
+756;The Resurrection of Gavin Stone;Comedy;2017;165
+757;The Shape of Water;Drama;2017;109
+758;The Space Between Us;Drama;2017;95
+759;The Square;Drama;2017;124
+760;The Star;Adventure;2017;61
+761;The Zookeeper's Wife;Drama;2017;165
+762;Thor: Ragnarok;Action;2017;137
+763;Three Billboards Outside Ebbing, Missouri;Drama;2017;121
+764;Transformers: The Last Knight;Action;2017;148
+765;Tulip Fever;Drama;2017;90
+766;Underworld: Blood Wars;Action;2017;95
+767;Valerian and the City of a Thousand Planets;Adventure;2017;126
+768;Victoria & Abdul;Drama;2017;164
+769;War for the Planet of the Apes;Action;2017;158
+770;Wish Upon;Horror;2017;114
+771;Wonder;Drama;2017;136
+772;Wonder Woman;Action;2017;91
+773;xXx: Return of Xander Cage;Action;2017;84
+774;Youth;Drama;2017;117
+775;12 Strong;Drama;2018;123
+776;A Quiet Place;Horror;2018;112
+777;A Star Is Born;Drama;2018;79
+778;A Wrinkle in Time;Adventure;2018;73
+779;Action Point;Comedy;2018;117
+780;Adrift;Drama;2018;168
+781;Alpha;Adventure;2018;120
+782;Ant-Man and the Wasp;Action;2018;110
+783;Aquaman;Action;2018;127
+784;Avengers: Infinity War;Action;2018;71
+785;Beautiful Boy;Drama;2018;156
+786;Ben Is Back;Drama;2018;95
+787;Black Panther;Action;2018;73
+788;Blockers;Comedy;2018;112
+789;Blumhouse's Truth or Dare;Horror;2018;85
+790;Bohemian Rhapsody;Drama;2018;156
+791;Book Club;Comedy;2018;151
+792;Boy Erased;Drama;2018;148
+793;Bumblebee;Adventure;2018;162
+794;Can You Ever Forgive Me?;Drama;2018;159
+795;Christopher Robin;Adventure;2018;125
+796;Crazy Rich Asians;Romantic Comedy;2018;127
+797;Creed II;Drama;2018;121
+798;Deadpool 2;Action;2018;109
+799;Death of a Nation;Documentary;2018;104
+800;Death Wish;Action;2018;81
+801;Den of Thieves;Action;2018;150
+802;Dr. Seuss' The Grinch;Adventure;2018;140
+803;Early Man;Adventure;2018;63
+804;Eighth Grade;Drama;2018;143
+805;Every Day;Drama;2018;96
+806;Fahrenheit 11/9;Documentary;2018;151
+807;Fantastic Beasts: The Crimes of Grindelwald;Adventure;2018;159
+808;Fifty Shades Freed;Drama;2018;91
+809;First Man;Drama;2018;156
+810;Forever My Girl;Drama;2018;97
+811;Game Night;Comedy;2018;74
+812;Goosebumps 2: Haunted Halloween;Horror;2018;148
+813;Gotti;Drama;2018;109
+814;Green Book;Comedy;2018;67
+815;Halloween;Horror;2018;80
+816;Hearts Beat Loud;Drama;2018;106
+817;Hell Fest;Horror;2018;66
+818;Hereditary;Horror;2018;61
+819;Holmes & Watson;Comedy;2018;111
+820;Hotel Transylvania 3: Summer Vacation;Adventure;2018;158
+821;I Can Only Imagine;Drama;2018;63
+822;I Feel Pretty;Comedy;2018;105
+823;If Beale Street Could Talk;Drama;2018;67
+824;Incredibles 2;Adventure;2018;152
+825;Indivisible;Drama;2018;113
+826;Insidious: The Last Key;Horror;2018;63
+827;Instant Family;Comedy;2018;122
+828;Johnny English Strikes Again;Comedy;2018;145
+829;Jurassic World: Fallen Kingdom;Action;2018;97
+830;Kin;Action;2018;135
+831;Life of the Party;Comedy;2018;83
+832;Love, Simon;Drama;2018;70
+833;Mamma Mia! Here We Go Again;Musical;2018;126
+834;Mary Poppins Returns;Musical;2018;168
+835;Mary Queen of Scots;Drama;2018;159
+836;Mile 22;Action;2018;162
+837;Mission: Impossible - Fallout;Action;2018;167
+838;Mortal Engines;Action;2018;145
+839;Night School;Comedy;2018;107
+840;Nobody's Fool;Drama;2018;74
+841;Ocean's Eight;Action;2018;62
+842;On the Basis of Sex;Drama;2018;112
+843;Operation Finale;Drama;2018;75
+844;Overboard;Romantic Comedy;2018;127
+845;Overlord;Action;2018;127
+846;Pacific Rim: Uprising;Action;2018;147
+847;Paul, Apostle of Christ;Drama;2018;89
+848;Peppermint;Action;2018;83
+849;Peter Rabbit;Adventure;2018;102
+850;Proud Mary;Action;2018;77
+851;Ralph Breaks the Internet;Adventure;2018;102
+852;Rampage;Action;2018;157
+853;Ready Player One;Adventure;2018;107
+854;Robin Hood;Action;2018;77
+855;Second Act;Comedy;2018;76
+856;Sgt. Stubby: An American Hero;Adventure;2018;118
+857;Sherlock Gnomes;Adventure;2018;96
+858;Sicario: Day of the Soldado;Action;2018;159
+859;Skyscraper;Action;2018;149
+860;Slender Man;Horror;2018;60
+861;Smallfoot;Adventure;2018;93
+862;Solo: A Star Wars Story;Adventure;2018;120
+863;Sorry to Bother You;Comedy;2018;134
+864;Spider-Man: Into the Spider-Verse;Adventure;2018;76
+865;SuperFly;Action;2018;117
+866;Suspiria;Horror;2018;62
+867;Tag;Comedy;2018;121
+868;Teen Titans GO! to the Movies;Adventure;2018;100
+869;The 15:17 to Paris;Drama;2018;118
+870;The Commuter;Action;2018;126
+871;The Equalizer 2;Action;2018;119
+872;The First Purge;Horror;2018;143
+873;The Hate U Give;Drama;2018;106
+874;The House with a Clock in Its Walls;Horror;2018;125
+875;The Meg;Action;2018;166
+876;The Mule;Drama;2018;159
+877;The Nun;Horror;2018;156
+878;The Nutcracker and the Four Realms;Adventure;2018;65
+879;The Possession of Hannah Grace;Horror;2018;70
+880;The Predator;Action;2018;165
+881;The Spy Who Dumped Me;Comedy;2018;163
+882;The Strangers: Prey at Night;Horror;2018;67
+883;Thoroughbreds;Drama;2018;100
+884;Tomb Raider;Action;2018;100
+885;Uncle Drew;Comedy;2018;106
+886;Unfriended: Dark Web;Horror;2018;132
+887;Venom;Action;2018;140
+888;Vice;Action;2018;77
+889;Welcome to Marwen;Drama;2018;163
+890;White Boy Rick;Drama;2018;92
+891;Winchester;Horror;2018;166
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;
+;;;;

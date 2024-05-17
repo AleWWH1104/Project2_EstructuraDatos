@@ -52,6 +52,18 @@ def NewUser():
 
     return render_template('NewUser.html')
 
+@app.route('/LogUser', methods=['GET', 'POST'])
+def LogUser():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+
+        with open('databases\\baseDatosUsuarios.csv', 'a', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow([username, password])
+
+        return redirect(url_for('home'))
+    return render_template('LogUser.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

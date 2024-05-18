@@ -18,10 +18,23 @@ def get_db_connection():
 def home():
     return render_template('index.html')
 
+def leerBDUser(username, password):
+    with open('databases/baseDatosUsuarios.csv', 'r', newline='') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            #compara el nombre de usuario
+            if row and row[0] == username and row[1]== password: 
+                user_exists = True
+                return  user_exists
+
 @app.route('/User')
 def User():
-    session = get_db_connection()
-    return render_template('User.html')
+    if 'username' in session:
+        username = session['username']
+        return render_template('User.html', username=username)
+    else:
+        flash('Por favor, inicie sesión primero.')
+        return redirect(url_for('LogUser'))
 
 @app.route('/NewUser', methods=['GET', 'POST'])
 def NewUser():
@@ -30,23 +43,16 @@ def NewUser():
         password = request.form['password']
 
         user_exists = False
-        with open('databases\\baseDatosUsuarios.csv', 'r', newline='') as file:
-            reader = csv.reader(file)
-            for row in reader:
-                # Asegúrate de que row no está vacío y compara el nombre de usuario
-                if row and row[0] == username:
-                    user_exists = True
-                    break
+        user_exists = leerBDUser(username, password)
 
         if user_exists:
             flash('El nombre de usuario ya está en uso, por favor elige otro.')
             return redirect(url_for('NewUser'))
-
-        with open('databases\\baseDatosUsuarios.csv', 'a', newline='') as file:
+        #Agregar el nuevo usuario a la base de datos
+        with open('databases/baseDatosUsuarios.csv', 'a', newline='') as file:
             writer = csv.writer(file)
             writer.writerow([username, password])
             flash('Usuario registrado exitosamente!')
-
         return redirect(url_for('home'))
 
     return render_template('NewUser.html')
@@ -57,12 +63,16 @@ def LogUser():
         username = request.form['username']
         password = request.form['password']
 
-        with open('databases\\baseDatosUsuarios.csv', 'a', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow([username, password])
+        user_exists = False
+        user_exists = leerBDUser(username, password)
 
-        return redirect(url_for('home'))
+        if user_exists:
+            flash('Ingreso exitoso')
+            session['username'] = username  # Almacenar el nombre de usuario en la sesión
+            return redirect(url_for('User'))
+
     return render_template('LogUser.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
+

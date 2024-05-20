@@ -57,3 +57,5 @@ contar = 0
 for movie in peliculas_diferentes:
     contar +=1
     print(f"{contar}- {movie}")
+
+neo4j_conexion.close()

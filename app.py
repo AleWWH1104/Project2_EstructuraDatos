@@ -1,5 +1,6 @@
-from flask import *
+from flask import Flask, render_template, request, redirect, url_for, flash, session
 from databases.Neo4jConfig import neo4j_conexion
+from src.NewUser import leerBDUser, insertarUsuarioEnCSV, insertarUsuarioEnNeo4j
 import csv
 
 app = Flask(__name__)
@@ -10,14 +11,16 @@ app.secret_key = "trespelusas"
 def home():
     return render_template('index.html')
 
+
 def leerBDUser(username, password):
     with open('databases/baseDatosUsuarios.csv', 'r', newline='') as file:
         reader = csv.reader(file)
         for row in reader:
-            #compara el nombre de usuario
-            if row and row[0] == username and row[1]== password: 
+            # compara el nombre de usuario
+            if row and row[0] == username and row[1] == password:
                 user_exists = True
-                return  user_exists
+                return user_exists
+
 
 @app.route('/User')
 def User():
@@ -28,26 +31,22 @@ def User():
         flash('Por favor, inicie sesión primero.')
         return redirect(url_for('LogUser'))
 
+
 @app.route('/NewUser', methods=['GET', 'POST'])
 def NewUser():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
 
-        user_exists = False
-        user_exists = leerBDUser(username, password)
+        # Inserción en CSV y Neo4j
+        insertarUsuarioEnCSV(username, password)
+        insertarUsuarioEnNeo4j(username, password)
 
-        if user_exists:
-            flash('El nombre de usuario ya está en uso, por favor elige otro.')
-            return redirect(url_for('NewUser'))
-        #Agregar el nuevo usuario a la base de datos
-        with open('databases/baseDatosUsuarios.csv', 'a', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow([username, password])
-            flash('Usuario registrado exitosamente!')
-        return redirect(url_for('home'))
+        flash('Usuario registrado exitosamente')
+        return redirect(url_for('LogUser'))
 
     return render_template('NewUser.html')
+
 
 @app.route('/LogUser', methods=['GET', 'POST'])
 def LogUser():
@@ -60,11 +59,12 @@ def LogUser():
 
         if user_exists:
             flash('Ingreso exitoso')
-            session['username'] = username  # Almacenar el nombre de usuario en la sesión
+            # Almacenar el nombre de usuario en la sesión
+            session['username'] = username
             return redirect(url_for('User'))
 
     return render_template('LogUser.html')
 
+
 if __name__ == '__main__':
     app.run(debug=True)
-

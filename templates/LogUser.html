@@ -17,6 +17,10 @@
             <label for="password">Contraseña:</label>
             <input type="password" id="password" name="password" required><br><br>
             <input type="submit" value="Entrar">
+            <div class="botonCuenta">
+                <h4>Si no tienes cuenta</h4>
+                <a href="{{ url_for('NewUser') }}">Crear cuenta</a>
+            </div>
         </form>
         </div>
     </div>

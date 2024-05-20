@@ -1,7 +1,7 @@
 from flask import *
 from databases.Neo4jConfig import neo4j_conexion
 import csv
-from ManageUser import *
+from src.ManageUser import *
 
 app = Flask(__name__)
 app.secret_key = "trespelusas"

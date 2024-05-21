@@ -1,0 +1,93 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Acme', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container-primero {
+  background-image: url("/static/images/fondoUser.png");
+  background-size: cover;
+  background-position: center center ;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  flex-direction: column;
+    }
+  h1{
+    color: white;
+    font-size: 50px;
+    font-family: Impact, sans-serif;
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+
+  .form-container {
+    background-color: rgba(87, 83, 83, 0.327);
+    padding: 20px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 80px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+input[type="text"], input[type="password"] {
+    font-size: 14px;
+    padding: 10px;
+    width: 200px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+}
+
+.container-final {
+    text-align: center;
+    margin: 20px 0;
+    font-family: 'Acme', sans-serif; /* Fuente específica para este contenedor */
+}
+
+.container-final h5 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.container-final button {
+    background-color: #524771;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Acme', sans-serif; /* Asegura que los botones también tengan la fuente */
+}
+
+.container-final button:hover {
+    background-color: #524771;
+}

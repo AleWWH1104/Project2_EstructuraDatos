@@ -1,38 +1,32 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
-    background-image: url("/static/images/fondoUser.png");
-    position: relative;background-size: cover;
-    height: 100vh;
+    background-color: #121212;
+    color: white;
+    font-family: 'Acme', sans-serif;
 }
 .container-primero{
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: space-around !important;
 }
 
-h1{
+.botones-genre {
+    width: 80%;
+    padding: 15px;
+}
+
+.botones-genre button {
+    padding: 15px;
+    background-color: #ABA2CE;
     color: white;
-    font-size: 50px;
-    font-family: 'Impact', sans-serif;
-    margin-top: 25px;margin-left: 25px;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    margin: 5px;
 }
-
-.form-container {
-    background-color: rgba(87, 83, 83, 0.327);
-    padding: 20px;
-    border-radius: 10px;
-
-    margin-top: 80px;
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 
 button.selected {
     background-color: #524771;
@@ -161,4 +155,4 @@ input[type="password"] {
 
 .container-final button.selected {
     background-color: #6c63ff;
-} 
+}

@@ -1,74 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
     background-color: #121212;
     color: white;
     font-family: 'Acme', sans-serif;
-    margin: 0;
-    padding: 0;
+}
+.container-primero{
+    display: flex;
+    justify-content: space-around !important;
 }
 
 .botones-genre {
-    width: 35%;
-    ;
-    flex-wrap: flex;
-    justify-content: space-evenly;
+    width: 80%;
     padding: 15px;
-    align-items: center;
 }
 
 .botones-genre button {
     padding: 15px;
     background-color: #ABA2CE;
     color: white;
-    font-family: 'Acme', sans-serif;
-    flex-direction: column;
-    align-items: center;
-    margin: 17px;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    margin: 5px;
 }
 
 button.selected {
     background-color: #524771;
-    /* Cambia el color al seleccionar */
     color: white;
 }
 
 .container-primero {
     background-image: url("/static/images/fondoUser.png");
     background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
     position: relative;
-    margin: 0;
-    padding: 20px;
-    box-sizing: border-box;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
 }
 
 h1 {
     color: white;
     font-size: 50px;
     font-family: 'Impact', sans-serif;
-    font-weight: bold;
     text-align: left;
-    margin: 0;
-    position: absolute;
+    font-weight: 500 !important;
     top: 20px;
     left: 20px;
+    margin-left: 25px;
+    margin-top: 25px;
+    margin-bottom: -110px;
+    z-index: 10;
+    background-color: transparent;
+    position: relative;
 }
 
 .form-container {
     background-color: rgba(87, 83, 83, 0.327);
-    padding: 20px;
+    padding: 20px 60px;
     border-radius: 10px;
-    margin: auto;
-    margin-top: 80px;
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-left: 60px;
+    max-width: 50%;
 }
 
 .form-group {
@@ -87,7 +82,6 @@ input[type="password"] {
     font-size: 14px;
     padding: 10px;
     width: 200px;
-    box-sizing: border-box;
     border-radius: 5px;
     border: none;
 }
@@ -95,7 +89,7 @@ input[type="password"] {
 .botones-genre {
     text-align: center;
     margin: 20px auto;
-    /* Centro horizontal */
+
 }
 
 .botones-genre h2 {
@@ -127,15 +121,18 @@ input[type="password"] {
 .container-final {
     text-align: center;
     margin: 20px auto;
-    /* Centro horizontal */
     width: 50%;
-    /* Ancho fijo del contenedor final */
     font-family: 'Acme', sans-serif;
 }
 
 .container-final h5 {
     font-size: 18px;
     margin-bottom: 10px;
+}
+
+.seleccion-preferencias {
+    max-width: 50%;
+    margin-right: 12rem;
 }
 
 .container-final button {

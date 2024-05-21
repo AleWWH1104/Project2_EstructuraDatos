@@ -9,9 +9,8 @@
 </head>
 
 <body>
+    <h1>MATCHFLIX: REGISTRO DE USUARIO</h1>
     <div class="container-primero">
-        <h1>MATCHFLIX: REGISTRO DE USUARIO</h1>
-
         <div class="form-container">
             <form id="registerForm" method="post">
                 <div class="form-group">
@@ -24,26 +23,27 @@
                 </div>
             </form>
         </div>
+        <div class="seleccion-preferencias">
+            <div class="botones-genre">
+                <h2>ELIGE 3 GENEROS FAVORITOS</h2>
+                <button type="button" onclick="selectGenre(this)">Action</button>
+                <button type="button" onclick="selectGenre(this)">Adventure</button>
+                <button type="button" onclick="selectGenre(this)">Drama</button>
+                <button type="button" onclick="selectGenre(this)">Comedy</button>
+                <button type="button" onclick="selectGenre(this)">Horror</button>
+                <button type="button" onclick="selectGenre(this)">Documentary</button>
+                <button type="button" onclick="selectGenre(this)">Musical</button>
+                <button type="button" onclick="selectGenre(this)">Romance</button>
+            </div>
 
-        <div class="botones-genre">
-            <h2>ELIGE 3 GENEROS FAVORITOS</h2>
-            <button type="button" onclick="selectGenre(this)">Action</button>
-            <button type="button" onclick="selectGenre(this)">Adventure</button>
-            <button type="button" onclick="selectGenre(this)">Drama</button>
-            <button type="button" onclick="selectGenre(this)">Comedy</button>
-            <button type="button" onclick="selectGenre(this)">Horror</button>
-            <button type="button" onclick="selectGenre(this)">Documentary</button>
-            <button type="button" onclick="selectGenre(this)">Musical</button>
-            <button type="button" onclick="selectGenre(this)">Romance</button>
-        </div>
-
-        <div class="container-final">
-            <h5>¿Prefieres películas de duración largas o cortas?</h5>
-            <button onclick="selectDuration(this)">Cortas</button>
-            <button onclick="selectDuration(this)">Largas</button>
-            <br><br><br>
-            <button onclick="continueProcess()">Continuar</button>
-        </div>
+            <div class="container-final">
+                <h5>¿Prefieres películas de duración largas o cortas?</h5>
+                <button onclick="selectDuration(this)">Cortas</button>
+                <button onclick="selectDuration(this)">Largas</button>
+                <br><br><br>
+                <button onclick="continueProcess()">Continuar</button>
+            </div>
+        </div> 
     </div>
     <script src="{{ url_for('static', filename='js/selectGenre.js') }}"></script>
 </body>

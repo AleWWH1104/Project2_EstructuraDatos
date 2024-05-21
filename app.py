@@ -1,6 +1,5 @@
 from flask import *
 from databases.Neo4jConfig import neo4j_conexion
-import csv
 from src.ManageUser import *
 
 app = Flask(__name__)
@@ -46,10 +45,14 @@ def NewUser():
             flash('El nombre de usuario ya está en uso, por favor elige otro.')
             return redirect(url_for('NewUser'))
         # Agregar el nuevo usuario a la base de datos
-        with open('databases/baseDatosUsuarios.csv', 'a', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow([username, password])
+        else:
+            insertarUsuarioEnCSV(username, password)
+            insertarUsuarioEnNeo4j(username, password)
+            selected_genres = request.form['selectedGenres']
+            genres_list = selected_genres.split(',')
+            print(genres_list)
             flash('Usuario registrado exitosamente!')
+            
         return redirect(url_for('home'))
 
     return render_template('NewUser.html')

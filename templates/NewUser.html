@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Registro de Usuario</title>
 </head>
+
 <body>
     <div>
         <h1>Registro de Usuario</h1>
@@ -14,18 +16,19 @@
             <input type="text" id="username" name="username" required><br><br>
             <label for="password">Contraseña:</label>
             <input type="password" id="password" name="password" required><br><br>
-            <input type="submit" value="Registrar">
+            <input type="hidden" id="selectedGenres" name="selectedGenres">
+            <div class="botones-genre">
+                <button type="button" onclick="selectGenre(this)">Action</button>
+                <button type="button" onclick="selectGenre(this)">Adventure</button>
+                <button type="button" onclick="selectGenre(this)">Drama</button>
+                <button type="button" onclick="selectGenre(this)">Comedy</button>
+                <button type="button" onclick="selectGenre(this)">Horror</button>
+                <button type="button" onclick="selectGenre(this)">Documentary</button>
+                <button type="button" onclick="selectGenre(this)">Musical</button>
+                <button type="button" onclick="selectGenre(this)">Romance</button>
+            </div>
+            <input type="submit" value="Registrar" onclick="updateSelectedGenres()">
         </form>
-    </div>
-    <div class="botones-genre">
-        <button onclick="selectGenre(this)">Action</button>
-        <button onclick="selectGenre(this)">Adventure</button>
-        <button onclick="selectGenre(this)">Drama</button>
-        <button onclick="selectGenre(this)">Comedy</button>
-        <button onclick="selectGenre(this)">Horror</button>
-        <button onclick="selectGenre(this)">Documentary</button>
-        <button onclick="selectGenre(this)">Musical</button>
-        <button onclick="selectGenre(this)">Romance</button>
     </div>
     <script src="{{ url_for('static', filename='js/selectGenre.js') }}"></script>
 </body>

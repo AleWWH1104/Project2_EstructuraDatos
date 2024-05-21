@@ -18,6 +18,10 @@ function selectGenre(button) {
 	console.log(selectedGenres);
 }
 
-function getGenre(){
+function updateSelectedGenres() {
+	document.getElementById('selectedGenres').value = selectedGenres.join(',');
+}
+
+function getGenre() {
 	return selectedGenres;
 }

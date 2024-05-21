@@ -1,6 +1,7 @@
 from flask import *
 from databases.Neo4jConfig import neo4j_conexion
 from src.ManageUser import *
+from src.ManageRelations import *
 
 app = Flask(__name__)
 app.secret_key = "trespelusas"
@@ -35,8 +36,14 @@ def LogUser():
 @app.route('/NewUser', methods=['GET', 'POST'])
 def NewUser():
     if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
+        data = request.json  # Obtener los datos enviados desde el cliente
+
+        username = data['username']
+        password = data['password']
+        selected_genres = data['selectedGenres']
+        selected_duration = [data['selectedDuration'][:-1]]
+        print(selected_genres)
+        print(selected_duration)
 
         user_exists = False
         user_exists = auth_user(username, password)
@@ -48,15 +55,14 @@ def NewUser():
         else:
             insertarUsuarioEnCSV(username, password)
             insertarUsuarioEnNeo4j(username, password)
-            selected_genres = request.form['selectedGenres']
-            genres_list = selected_genres.split(',')
-            print(genres_list)
+            assign_relations(username, selected_genres)
+            assign_relations(username, selected_duration)
+
             flash('Usuario registrado exitosamente!')
             
-        return redirect(url_for('home'))
+        return jsonify({'message': 'Usuario registrado exitosamente!'})
 
     return render_template('NewUser.html')
-
 
 @app.route('/User')
 def User():

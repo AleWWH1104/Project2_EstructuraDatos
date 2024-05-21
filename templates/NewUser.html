@@ -28,14 +28,14 @@
 
         <div class="botones-genre">
             <h2>ELIGE 3 GENEROS FAVORITOS</h2>
-            <button onclick="selectGenre(this)">Acción</button>
-            <button onclick="selectGenre(this)">Aventura</button>
-            <button onclick="selectGenre(this)">Comedia</button>
-            <button onclick="selectGenre(this)">Documental</button>
-            <button onclick="selectGenre(this)">Drama</button>
-            <button onclick="selectGenre(this)">Horror</button>
-            <button onclick="selectGenre(this)">Musical</button>
-            <button onclick="selectGenre(this)">Romance</button>
+            <button type="button" onclick="selectGenre(this)">Action</button>
+            <button type="button" onclick="selectGenre(this)">Adventure</button>
+            <button type="button" onclick="selectGenre(this)">Drama</button>
+            <button type="button" onclick="selectGenre(this)">Comedy</button>
+            <button type="button" onclick="selectGenre(this)">Horror</button>
+            <button type="button" onclick="selectGenre(this)">Documentary</button>
+            <button type="button" onclick="selectGenre(this)">Musical</button>
+            <button type="button" onclick="selectGenre(this)">Romance</button>
         </div>
 
         <div class="container-final">
@@ -46,21 +46,7 @@
             <button onclick="continueProcess()">Continuar</button>
         </div>
     </div>
-
-    <script>
-        function selectGenre(button) {
-            button.classList.toggle('selected');
-        }
-
-        function selectDuration(button) {
-            document.querySelectorAll('.container-final button').forEach(btn => btn.classList.remove('selected'));
-            button.classList.add('selected');
-        }
-
-        function continueProcess() {
-            window.location.href = "LogUser";
-        }
-    </script>
+    <script src="{{ url_for('static', filename='js/selectGenre.js') }}"></script>
 </body>
 
 </html>

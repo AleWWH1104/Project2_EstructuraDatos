@@ -1,7 +1,7 @@
 from flask import *
-from databases.Neo4jConfig import neo4j_conexion
 import csv
 from src.ManageUser import *
+from src.RecomendationSys import *
 
 app = Flask(__name__)
 app.secret_key = "trespelusas"
@@ -52,7 +52,11 @@ def NewUser():
 def User():
     if 'username' in session:
         username = session['username']
-        return render_template('User.html', username=username)
+        movies_vecinos = vecinoSimilar(username)
+        getRecommendedMovies(username,movies_vecinos)
+        randomMovies = aleatoryMovies(peliculas_diferentes)
+        diccionario1 = movieDiccionaries(randomMovies)
+        return render_template('User.html', username=username, diccionario=diccionario1)
     else:
         flash('Por favor, inicie sesión primero.')
         return redirect(url_for('LogUser'))

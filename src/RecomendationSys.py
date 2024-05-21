@@ -73,22 +73,22 @@ def movieDiccionaries(movies):
                 })
     return movie_Dicc
 
-username = "batman4"
-movies_vecinos = vecinoSimilar(username)
-getRecommendedMovies(username,movies_vecinos)
-randomMovies = aleatoryMovies(peliculas_diferentes)
+# username = "batman4"
+# movies_vecinos = vecinoSimilar(username)
+# getRecommendedMovies(username,movies_vecinos)
+# randomMovies = aleatoryMovies(peliculas_diferentes)
 
-# Imprimir las películas
-contar = 0
-for movie in randomMovies:
-    contar +=1
-    print(f"{contar}- {movie}")
+# # Imprimir la información de las películas
+# contar = 0
+# for movie in randomMovies:
+#     contar +=1
+#     print(f"{contar}- {movie}")
 
-diccionario = movieDiccionaries(randomMovies)
+# diccionario = movieDiccionaries(randomMovies)
 
-# Imprimir la información de las películas
-for movie_info in diccionario:
-    print(movie_info)
+# # Imprimir la información de las películas
+# for movie_info in diccionario:
+#     print(movie_info)
 
 # Cerrar la conexión
 neo4j_conexion.close()

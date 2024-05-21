@@ -72,7 +72,7 @@ def User():
         getRecommendedMovies(username,movies_vecinos)
         randomMovies = aleatoryMovies(peliculas_diferentes)
         diccionario1 = movieDiccionaries(randomMovies)
-        return render_template('User.html', username=username, diccionario=diccionario1)
+        return render_template('User.html', username=username, diccionario1=diccionario1)
     else:
         flash('Por favor, inicie sesión primero.')
         return redirect(url_for('LogUser'))

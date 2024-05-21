@@ -20,7 +20,19 @@ def auth_user(username, password):
             return True
         else:
             return False
+        
+def exist_user(username):
+    with neo4j_conexion.get_session() as session:
+        result = session.run(
+            "MATCH (u:User {name: $username}) RETURN u", username=username)
+        record = result.single()
+        print(record)
 
+        # Verificar si se encontró el usuario
+        if record!=None:
+            return True
+        else:
+            return False
 
 def insertarUsuarioEnCSV(username, password):
     with open('databases/baseDatosUsuarios.csv', 'a', newline='') as file:

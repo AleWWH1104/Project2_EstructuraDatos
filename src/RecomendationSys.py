@@ -52,6 +52,45 @@ def aleatoryMovies(movies):
     selectedMovies = random.sample(movies, cant)
     return selectedMovies
 
+def genrMoreView(username):
+    query = """
+    MATCH (u:User {name: $username})-[:LIKES]->(m:Movie)-[:IN_GENRE]->(g:Genre)
+    RETURN g.name AS genre, COUNT(m) AS count
+    ORDER BY count DESC
+    LIMIT 3
+    """
+    parameters = {'username': username}
+
+    with neo4j_conexion.get_session() as session:
+        result = session.run(query, parameters)
+        top_genres = []
+        for record in result:
+            top_genres.append(record['genre'])
+    
+    return top_genres
+
+def recomend_geners_movie(generes):
+    moviesList = []
+    for genere in generes:
+        movies = aleatoryMovies(obtener_nombres_peliculas_por_genero(genere))
+        dics = movieDiccionaries(movies)
+        moviesList.append(dics)
+
+    return moviesList[0], moviesList[1], moviesList[2]
+
+def obtener_nombres_peliculas_por_genero(genero):
+    query = """
+    MATCH (m:Movie)-[:IN_GENRE]->(g:Genre {name: $genero})
+    RETURN m.name AS nombre_pelicula
+    """
+    parametros = {'genero': genero}
+    
+    with neo4j_conexion.get_session() as sesion:
+        resultados = sesion.run(query, parametros)
+        nombres_peliculas = [registro['nombre_pelicula'] for registro in resultados]
+    
+    return nombres_peliculas
+
 def movieDiccionaries(movies):
     movie_Dicc = []
     for movie in movies:

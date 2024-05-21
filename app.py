@@ -52,10 +52,14 @@ def NewUser():
 
     return render_template('NewUser.html')
 
-@app.route('/User')
+@app.route('/User', methods=['GET', 'POST'])
 def User():
     if 'username' in session:
         username = session['username']
+        if request.method == 'POST':
+            movie_name = ""
+            assign_relations(username, movie_name)
+
         movies_vecinos = vecinoSimilar(username)
         getRecommendedMovies(username,movies_vecinos)
         randomMovies = aleatoryMovies(peliculas_diferentes)

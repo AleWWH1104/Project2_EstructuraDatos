@@ -1,5 +1,6 @@
 const maxSelections = 3;
 let selectedGenres = [];
+let selectedDuration = "";
 
 function selectGenre(button) {
 	const genre = button.textContent;
@@ -18,30 +19,16 @@ function selectGenre(button) {
 	console.log(selectedGenres);
 }
 
-function updateSelectedGenres() {
-	document.getElementById('selectedGenres').value = selectedGenres.join(',');
-}
-
-function getGenre() {
-	return selectedGenres;
-}
-
-
 function selectDuration(button) {
-	// Remover la clase "selected" de todos los botones
 	document.querySelectorAll('.container-final button').forEach(btn => btn.classList.remove('selected'));
-
-	// Agregar la clase "selected" al botón seleccionado
 	button.classList.add('selected');
+	selectedDuration = button.textContent;
+	console.log(selectedDuration);
 }
 
 function continueProcess() {
 	var username = document.getElementById('username').value;
 	var password = document.getElementById('password').value;
-	var selectedGenres = getGenre();  // Esta función obtiene los géneros seleccionados del JavaScript
-
-	// Obtener la duración seleccionada
-	var selectedDuration = document.querySelector('.container-final button.selected').textContent;
 
 	// Crear un objeto con los datos a enviar
 	var data = {
@@ -58,12 +45,11 @@ function continueProcess() {
 	xhr.onreadystatechange = function () {
 		if (xhr.readyState === 4 && xhr.status === 200) {
 			// Redireccionar a donde desees después de enviar los datos exitosamente
-			window.location.href = "/LogUser";  // Cambia "/redirect_page" por la URL deseada
-		} else {
+			window.location.href = "/User";  // Cambia "/User" por la URL deseada
+		} else if (xhr.readyState === 4) {
 			// Manejar cualquier error que ocurra durante la solicitud
 			console.error('Error:', xhr.responseText);
 		}
 	};
 	xhr.send(JSON.stringify(data));
 }
-

@@ -14,7 +14,7 @@
         <h1>MATCHFLIX: REGISTRO DE USUARIO</h1>
 
         <div class="form-container">
-            <form id="registerForm" method="post">
+            <form id="registerForm">
                 <div class="form-group">
                     <label for="username">Usuario:</label>
                     <input type="text" id="username" name="username" placeholder="Nombre" required>
@@ -40,10 +40,10 @@
 
         <div class="container-final">
             <h5>¿Prefieres películas de duración largas o cortas?</h5>
-            <button onclick="selectDuration(this)">Cortas</button>
-            <button onclick="selectDuration(this)">Largas</button>
+            <button type="button" onclick="selectDuration(this)">Cortas</button>
+            <button type="button" onclick="selectDuration(this)">Largas</button>
             <br><br><br>
-            <button onclick="continueProcess()">Continuar</button>
+            <button type="button" onclick="continueProcess()">Continuar</button>
         </div>
     </div>
     <script src="{{ url_for('static', filename='js/selectGenre.js') }}"></script>

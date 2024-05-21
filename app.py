@@ -1,28 +1,31 @@
 from flask import *
-from neo4j import GraphDatabase
+from databases.Neo4jConfig import neo4j_conexion
 import csv
+from src.ManageUser import *
 
 app = Flask(__name__)
 app.secret_key = "trespelusas"
 
-# Configuración de la conexión a Neo4j
-uri = "neo4j+ssc://069aae57.databases.neo4j.io"
-username = "neo4j"
-password = "psDe8tSPGORUcnklsI2tlTZasxbwuJ-kZ_SzUToh8cA"
-driver = GraphDatabase.driver(uri, auth=(username, password))
-
-
-def get_db_connection():
-    return driver.session()
-
+#Inicio de programa
 @app.route('/')
 def home():
     return render_template('index.html')
 
-@app.route('/User')
-def User():
-    session = get_db_connection()
-    return render_template('User.html')
+#Iniciar sesion usuario
+@app.route('/LogUser', methods=['GET', 'POST'])
+def LogUser():
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+
+        user_exists = False
+        user_exists = auth_user(username, password)
+
+        if user_exists:
+            flash('Ingreso exitoso')
+            session['username'] = username  # Almacenar el nombre de usuario en la sesión
+            return redirect(url_for('User'))
+    return render_template('LogUser.html')
 
 @app.route('/NewUser', methods=['GET', 'POST'])
 def NewUser():
@@ -31,39 +34,29 @@ def NewUser():
         password = request.form['password']
 
         user_exists = False
-        with open('databases\\baseDatosUsuarios.csv', 'r', newline='') as file:
-            reader = csv.reader(file)
-            for row in reader:
-                # Asegúrate de que row no está vacío y compara el nombre de usuario
-                if row and row[0] == username:
-                    user_exists = True
-                    break
+        user_exists = auth_user(username, password)
 
         if user_exists:
             flash('El nombre de usuario ya está en uso, por favor elige otro.')
             return redirect(url_for('NewUser'))
-
-        with open('databases\\baseDatosUsuarios.csv', 'a', newline='') as file:
+        #Agregar el nuevo usuario a la base de datos
+        with open('databases/baseDatosUsuarios.csv', 'a', newline='') as file:
             writer = csv.writer(file)
             writer.writerow([username, password])
             flash('Usuario registrado exitosamente!')
-
         return redirect(url_for('home'))
 
     return render_template('NewUser.html')
 
-@app.route('/LogUser', methods=['GET', 'POST'])
-def LogUser():
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']
-
-        with open('databases\\baseDatosUsuarios.csv', 'a', newline='') as file:
-            writer = csv.writer(file)
-            writer.writerow([username, password])
-
-        return redirect(url_for('home'))
-    return render_template('LogUser.html')
+@app.route('/User')
+def User():
+    if 'username' in session:
+        username = session['username']
+        return render_template('User.html', username=username)
+    else:
+        flash('Por favor, inicie sesión primero.')
+        return redirect(url_for('LogUser'))
 
 if __name__ == '__main__':
     app.run(debug=True)
+

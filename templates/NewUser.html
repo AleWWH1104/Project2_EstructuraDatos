@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Registro de Usuario</title>
     <link rel="stylesheet" href=" userregister.css"/>
 
 </head>
-
 <body>
     <div>
         <div class="container primero"></div>
@@ -22,6 +22,17 @@
             <input type="submit" value="Registrar">
         </form>
     </div>
+    <div class="botones-genre">
+        <button onclick="selectGenre(this)">Action</button>
+        <button onclick="selectGenre(this)">Adventure</button>
+        <button onclick="selectGenre(this)">Drama</button>
+        <button onclick="selectGenre(this)">Comedy</button>
+        <button onclick="selectGenre(this)">Horror</button>
+        <button onclick="selectGenre(this)">Documentary</button>
+        <button onclick="selectGenre(this)">Musical</button>
+        <button onclick="selectGenre(this)">Romance</button>
+    </div>
+    <script src="{{ url_for('static', filename='js/selectGenre.js') }}"></script>
     <div class="container final">
         <h5> 
             ¿Prefieres películas de duración largas o cortas?

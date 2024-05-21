@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/inicio.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Inicio de Sesion</title>
 </head>
 <body>
@@ -17,7 +17,11 @@
             <label for="password">Contraseña:</label>
             <input type="password" id="password" name="password" required><br><br>
             <input type="submit" value="Entrar">
-        </form>
+            <div class="botonCuenta">
+                <h4>Si no tienes cuenta</h4>
+                <a href="{{ url_for('NewUser') }}">Crear cuenta</a>
+            </div>
+            </form>
         </div>
     </div>
 </body>

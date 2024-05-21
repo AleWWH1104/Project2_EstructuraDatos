@@ -4,56 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/inicio.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/slider.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <title>Sistema de Recomendacion</title>
 </head>
 <body>
     <div class="banner-user">
-        <h1>Bienvenido {Usuario}</h1>
+        <h1>Bienvenid@  {{ username }}</h1>
     </div>
     <div class="titulos"><h2>Algunos usuarios similares tambien han visto:</h2></div>
      <!-- Swiper -->
     <div class="container">
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-container mySwiper">
+        <div id= "bn1" class="swiper-button-next"></div>
+        <div id= "bp1" class="swiper-button-prev"></div>
+        <div class="swiper-container mySwiper1">
             <div id="carrusel-container-1" class="swiper-wrapper"></div> <!-- Contenido de las cartas se generará dinámicamente -->
         </div>
     </div>
     <div class="titulos"><h2>Porque tu genero favorito es {Genero1}:</h2></div>
     
     <div class="container">
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-container mySwiper">
+        <div id= "bn2" class="swiper-button-next"></div>
+        <div id= "bp2" class="swiper-button-prev"></div>
+        <div class="swiper-container mySwiper2">
             <div id="carrusel-container-2" class="swiper-wrapper"></div> 
         </div>
     </div>
     <div class="titulos"><h2>Porque tu genero favorito es {Genero2}:</h2></div>
     <div class="container">
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-container mySwiper">
+        <div id= "bn3" class="swiper-button-next"></div>
+        <div id= "bp3" class="swiper-button-prev"></div>
+        <div class="swiper-container mySwiper3">
             <div id="carrusel-container-3" class="swiper-wrapper"></div> 
         </div>
     </div>
     <div class="titulos"><h2>Porque tu genero favorito es {Genero3}:</h2></div>
     <div class="container">
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-container mySwiper">
+        <div id= "bn4" class="swiper-button-next"></div>
+        <div id= "bp4" class="swiper-button-prev"></div>
+        <div class="swiper-container mySwiper4">
             <div id="carrusel-container-4" class="swiper-wrapper"></div> 
-        </div>
-    </div>
-    <div class="titulos"><h2>Peliculas con duracion {larga/corta}:</h2></div>
-
-    <div class="container">
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-container mySwiper">
-            <div id="carrusel-container-5" class="swiper-wrapper"></div> 
         </div>
     </div>
     <!-- Swiper JS -->

@@ -3,46 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/userregister.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Registro de Usuario</title>
-    <link rel="stylesheet" href=" userregister.css"/>
-
 </head>
 <body>
-    <div>
-        <div class="container primero"></div>
+    <div class="container-primero">
         <h1>MATCHFLIX: REGISTRO DE USUARIO</h1>
-        <form method="post">
-            <label for="username">Nombre de usuario:</label>
-            <input type="text" id="username" name="username" placeholder ="Nombre" required><br><br>
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required><br><br>
+        
+        <div class="form-container">
+            <form method="post">
+                <div class="form-group">
+                    <label for="username">Usuario:</label>
+                    <input type="text" id="username" name="username" placeholder="Nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+            </form>
+        </div>
+
+        <div class="botones-genre">
+            <h2>ELIGE 3 GENEROS FAVORITOS</h2>
             <br>
+            <button onclick="selectGenre(this)">Acción</button>
+            <button onclick="selectGenre(this)">Aventura</button>
+            <button onclick="selectGenre(this)">Comedia</button>
+            <button onclick="selectGenre(this)">Documental</button>
+            <button onclick="selectGenre(this)">Drama</button>
+            <button onclick="selectGenre(this)">Horror</button>
+            <button onclick="selectGenre(this)">Musical</button>
+            <button onclick="selectGenre(this)">Romance</button>
+        </div>
 
-            <input type="submit" value="Registrar">
-        </form>
+        <div class="container-final">
+            <h5>¿Prefieres películas de duración largas o cortas?</h5>
+            <button onclick="selectDuration(this)">Cortas</button>
+            <button onclick="selectDuration(this)">Largas</button>
+            <br><br><br>
+            <button onclick="continueProcess()">Continuar</button>
+        </div>
     </div>
-    <div class="botones-genre">
-        <button onclick="selectGenre(this)">Action</button>
-        <button onclick="selectGenre(this)">Adventure</button>
-        <button onclick="selectGenre(this)">Drama</button>
-        <button onclick="selectGenre(this)">Comedy</button>
-        <button onclick="selectGenre(this)">Horror</button>
-        <button onclick="selectGenre(this)">Documentary</button>
-        <button onclick="selectGenre(this)">Musical</button>
-        <button onclick="selectGenre(this)">Romance</button>
-    </div>
+
     <script src="{{ url_for('static', filename='js/selectGenre.js') }}"></script>
-    <div class="container final">
-        <h5> 
-            ¿Prefieres películas de duración largas o cortas?
-        </h5> 
-        <button onclick> Cortas</button>
-        <button onclick> Largas</button>
-        <br>
-        <br>
-        <br>
-        <button onclick> Continuar</button>
 </body>
-
-</html>0
+</html>

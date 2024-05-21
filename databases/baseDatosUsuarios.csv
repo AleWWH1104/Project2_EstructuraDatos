@@ -33,8 +33,14 @@ hola,hola
 jijijaja,jijijaja
 yia,cafe
 pedro,1234
+<<<<<<< HEAD
 batman4,1234
 irisA,ayala11
 Iris,1234
 ,
 ,
+=======
+irisA,ayala11
+Iris,1234
+DoMovies,54321
+>>>>>>> 7c34ee6ec78833eec864e9d7f00d39e7e08c5da7

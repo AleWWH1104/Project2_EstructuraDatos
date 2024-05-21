@@ -57,9 +57,10 @@ def User():
     if 'username' in session:
         username = session['username']
         if request.method == 'POST':
-            movie_name = ""
+            data = request.get_json()
+            movie_name = data.get('movie_name')
             assign_relations(username, movie_name)
-
+            return jsonify({'message': f'Película {movie_name} asignada a {username}'})
         movies_vecinos = vecinoSimilar(username)
         getRecommendedMovies(username,movies_vecinos)
         randomMovies = aleatoryMovies(peliculas_diferentes)

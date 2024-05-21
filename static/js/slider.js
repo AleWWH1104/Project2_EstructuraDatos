@@ -93,3 +93,38 @@ var swiper4 = new Swiper('.mySwiper4', {
 	  },
 	} 
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll(".ver-pelicula");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function() {
+            // Obtener el nombre de la película
+            const movieName = this.parentElement.querySelector(".movie-name").innerText;
+            
+            // Mostrar el nombre de la película en la consola
+            console.log(movieName);
+            
+            // Cambiar el color del botón
+            this.style.backgroundColor = "white";
+            this.style.color = "black";
+
+            // Enviar el nombre de la película al servidor
+            fetch('/User', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ movie_name: movieName })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.message);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+    });
+});
+

@@ -7,33 +7,34 @@ body {
 }
 
 .container-primero {
-  background-image: url("/static/images/fondoUser.png");
-  background-size: cover;
-  background-position: center center ;
-  background-repeat: no-repeat;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  position: relative;
-  margin: 0;
-  padding: 20px;
-  box-sizing: border-box;
-  flex-direction: column;
-    }
-  h1{
+    background-image: url("/static/images/fondoUser.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+h1 {
     color: white;
     font-size: 50px;
-    font-family: Impact, sans-serif;
+    font-family: 'Impact', sans-serif;
     font-weight: bold;
     text-align: left;
     margin: 0;
     position: absolute;
     top: 20px;
     left: 20px;
-  }
+}
 
-  .form-container {
+.form-container {
     background-color: rgba(87, 83, 83, 0.327);
     padding: 20px;
     border-radius: 10px;
@@ -65,10 +66,42 @@ input[type="text"], input[type="password"] {
     border: none;
 }
 
+.botones-genre {
+    text-align: center;
+    margin: 20px auto; /* Centro horizontal */
+}
+
+.botones-genre h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.botones-genre button {
+    background-color: #524771;
+    color: white;
+    font-size: 16px;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Acme', sans-serif;
+    transition: background-color 0.3s;
+}
+
+.botones-genre button:hover {
+    background-color: #675a92;
+}
+
+.botones-genre button.selected {
+    background-color: #6c63ff;
+}
+
 .container-final {
     text-align: center;
-    margin: 20px 0;
-    font-family: 'Acme', sans-serif; /* Fuente específica para este contenedor */
+    margin: 20px auto; /* Centro horizontal */
+    width: 50%; /* Ancho fijo del contenedor final */
+    font-family: 'Acme', sans-serif;
 }
 
 .container-final h5 {
@@ -85,9 +118,14 @@ input[type="text"], input[type="password"] {
     margin: 10px;
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'Acme', sans-serif; /* Asegura que los botones también tengan la fuente */
+    font-family: 'Acme', sans-serif;
+    transition: background-color 0.3s;
 }
 
 .container-final button:hover {
-    background-color: #524771;
+    background-color: #675a92;
+}
+
+.container-final button.selected {
+    background-color: #6c63ff;
 }

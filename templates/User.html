@@ -26,10 +26,11 @@
             <div id="carrusel-container-1" class="swiper-wrapper">
                 {% for movie in diccionario1 %}
                 <div class="swiper-slide">
-                    <h3>{{ movie.name }}</h3>
+                    <h3 class="movie-name">{{ movie.name }}</h3>
                     <h3>{{ movie.genre }}</h3>
                     <h3>{{ movie.duration }} min</h3>
                     <h3>{{ movie.year }}</h3>
+                    <button class="ver-pelicula">Ver Pelicula</button>
                 </div>
                 {% endfor %}
             </div> <!-- Contenido de las cartas se generará dinámicamente -->

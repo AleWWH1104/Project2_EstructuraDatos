@@ -12,3 +12,10 @@ font-size: 18px;background: #ABA2CE;border-radius: 15px;font-family: "Acme", san
 .titulos h2{font-size: 20px;font-family: "Acme", sans-serif;color: white;background-color: #252525;
 padding: 25px 0px 0px 25px; margin-top: 0.5px;
 }
+
+.swiper-slide button{
+    background-color: #524771;color: white;font-family: "Acme", sans-serif;padding: 5px 10px;
+}
+
+
+

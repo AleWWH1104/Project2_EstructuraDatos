@@ -19,7 +19,16 @@
         <div id= "bn1" class="swiper-button-next"></div>
         <div id= "bp1" class="swiper-button-prev"></div>
         <div class="swiper-container mySwiper1">
-            <div id="carrusel-container-1" class="swiper-wrapper"></div> <!-- Contenido de las cartas se generará dinámicamente -->
+            <div id="carrusel-container-1" class="swiper-wrapper">
+                {% for movie in diccionario1 %}
+                <div class="swiper-slide">
+                    <h3>{{ movie.name }}</h3>
+                    <h3>{{ movie.genre }}</h3>
+                    <h3>{{ movie.duration }} min</h3>
+                    <h3>{{ movie.year }}</h3>
+                </div>
+                {% endfor %}
+            </div> <!-- Contenido de las cartas se generará dinámicamente -->
         </div>
     </div>
     <div class="titulos"><h2>Porque tu genero favorito es {Genero1}:</h2></div>

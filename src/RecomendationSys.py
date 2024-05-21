@@ -1,5 +1,6 @@
 import sys
-import os
+import os, random
+
 # Añadir el directorio raíz al sys.path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
@@ -24,7 +25,7 @@ def vecinoSimilar(username):
     
     return similar_users
 
-def obtenerPeliculasDiferentes(username, otro_usuario):
+def getMoviesVecino(username, otro_usuario):
     query = """
     MATCH (u1:User {name: $username})-[:LIKES]->(m:Movie)
     MATCH (u2:User {name: $otro_usuario})-[:LIKES]->(m2:Movie)
@@ -37,25 +38,40 @@ def obtenerPeliculasDiferentes(username, otro_usuario):
         result = session.run(query, parameters)
         return result.single()['peliculas_otro_usuario']
 
-user_name = "batman4"  # Reemplaza esto con el nombre del usuario que deseas buscar
-similar_users = vecinoSimilar(user_name)
-
 # Usamos conjuntos para evitar duplicados
 usuarios_vistos = set()
 peliculas_diferentes = set()
 
-for user, movies in similar_users:
-    usuarios_vistos.add(user)
-    peliculas_diferentes.update(obtenerPeliculasDiferentes(user_name, user))
+def getRecommendedMovies(username, movies_vecinos):
+    for user, movies in movies_vecinos:
+        usuarios_vistos.add(user)
+        peliculas_diferentes.update(getMoviesVecino(username, user))
 
-print("Usuarios similares:")
-for user in usuarios_vistos:
-    print(f"- {user}")
+def aleatoryMovies(movies):
+    cant = 10
+    selectedMovies = random.sample(movies, cant)
+    return selectedMovies
 
-print("\nPelículas diferentes de los usuarios similares:")
-contar = 0
-for movie in peliculas_diferentes:
-    contar +=1
-    print(f"{contar}- {movie}")
+def movieDiccionaries(movies):
+    movie_Dicc = []
+    for movie in movies:
+        query = """
+        MATCH (m:Movie {name: $movie})-[:IN_GENRE]->(g:Genre)
+        MATCH (m)-[:HAS_DURATION]->(d:Duration)
+        RETURN m.name AS name, g.name AS genre, m.year AS year, d.time AS duration
+        """
+        parameters = {'movie': movie}
 
+        with neo4j_conexion.get_session() as session:
+            result = session.run(query, parameters)
+            for record in result:
+                movie_Dicc.append({
+                    'name': record['name'],
+                    'genre': record['genre'],
+                    'year': record['year'],
+                    'duration': record['duration']
+                })
+    return movie_Dicc
+
+# Cerrar la conexión
 neo4j_conexion.close()

@@ -6,6 +6,31 @@ body {
     padding: 0;
 }
 
+.botones-genre {
+    width: 35%;
+    ;
+    flex-wrap: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+    align-items: center;
+}
+
+.botones-genre button {
+    padding: 15px;
+    background-color: #ABA2CE;
+    color: white;
+    font-family: 'Acme', sans-serif;
+    flex-direction: column;
+    align-items: center;
+    margin: 17px;
+}
+
+button.selected {
+    background-color: #524771;
+    /* Cambia el color al seleccionar */
+    color: white;
+}
+
 .container-primero {
     background-image: url("/static/images/fondoUser.png");
     background-size: cover;
@@ -57,7 +82,8 @@ label {
     margin-right: 10px;
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"],
+input[type="password"] {
     font-size: 14px;
     padding: 10px;
     width: 200px;
@@ -68,7 +94,8 @@ input[type="text"], input[type="password"] {
 
 .botones-genre {
     text-align: center;
-    margin: 20px auto; /* Centro horizontal */
+    margin: 20px auto;
+    /* Centro horizontal */
 }
 
 .botones-genre h2 {
@@ -99,8 +126,10 @@ input[type="text"], input[type="password"] {
 
 .container-final {
     text-align: center;
-    margin: 20px auto; /* Centro horizontal */
-    width: 50%; /* Ancho fijo del contenedor final */
+    margin: 20px auto;
+    /* Centro horizontal */
+    width: 50%;
+    /* Ancho fijo del contenedor final */
     font-family: 'Acme', sans-serif;
 }
 

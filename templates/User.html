@@ -13,6 +13,7 @@
 
 <body>
     <div class="banner-user">
+        <button><a href="{{ url_for('LogUser') }}">Cerrar sesion</a></button>
         <h1>Bienvenid@ {{ username }}</h1>
     </div>
     <div class="titulos">
@@ -30,7 +31,7 @@
                     <h3>{{ movie.genre }}</h3>
                     <h3>{{ movie.duration }} min</h3>
                     <h3>{{ movie.year }}</h3>
-                    <button class="ver-pelicula">Ver Pelicula</button>
+                    <button id="watched" class="ver-pelicula">Ver Pelicula</button>
                 </div>
                 {% endfor %}
             </div> <!-- Contenido de las cartas se generará dinámicamente -->
@@ -51,7 +52,7 @@
                     <h3>{{ movie.genre }}</h3>
                     <h3>{{ movie.duration }} min</h3>
                     <h3>{{ movie.year }}</h3>
-                    <button class="ver-pelicula">Ver Pelicula</button>
+                    <button id="watched" class="ver-pelicula">Ver Pelicula</button>
                 </div>
                 {% endfor %}
             </div>
@@ -71,7 +72,7 @@
                     <h3>{{ movie.genre }}</h3>
                     <h3>{{ movie.duration }} min</h3>
                     <h3>{{ movie.year }}</h3>
-                    <button class="ver-pelicula">Ver Pelicula</button>
+                    <button id="watched" class="ver-pelicula">Ver Pelicula</button>
                 </div>
                 {% endfor %}
             </div>
@@ -91,9 +92,8 @@
                     <h3>{{ movie.genre }}</h3>
                     <h3>{{ movie.duration }} min</h3>
                     <h3>{{ movie.year }}</h3>
-                    <button class="ver-pelicula">Ver Pelicula</button>
+                    <button id="watched" class="ver-pelicula">Ver Pelicula</button>
                 </div>
-                {% endfor %}
             </div>
         </div>
     </div>

@@ -33,7 +33,7 @@
                 <button type="button" onclick="selectGenre(this)">Horror</button>
                 <button type="button" onclick="selectGenre(this)">Documentary</button>
                 <button type="button" onclick="selectGenre(this)">Musical</button>
-                <button type="button" onclick="selectGenre(this)">Romance</button>
+                <button type="button" onclick="selectGenre(this)">RomanticComedy</button>
             </div>
 
             <div class="container-final">
@@ -41,11 +41,10 @@
                 <button onclick="selectDuration(this)">Cortas</button>
                 <button onclick="selectDuration(this)">Largas</button>
                 <br><br><br>
-                <button onclick="continueProcess()">Continuar</button>
+                <button id="submit-button" onclick="continueProcess()">Continuar</button>
             </div>
         </div> 
     </div>
     <script src="{{ url_for('static', filename='js/selectGenre.js') }}"></script>
 </body>
-
-</html>
+</html>     

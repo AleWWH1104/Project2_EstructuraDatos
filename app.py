@@ -12,6 +12,7 @@ def home():
 
 @app.route('/LogUser', methods=['GET', 'POST'])
 def LogUser():
+    username = None
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
@@ -34,12 +35,11 @@ def NewUser():
         username = data['username']
         password = data['password']
         selected_genres = data['selectedGenres']
-        selected_duration = data['selectedDuration']
-
-        user_exists = auth_user(username, password)
-
+        selected_duration = [data['selectedDuration'][:-1]]
+        user_exists = exist_user(username)
         if user_exists:
             flash('El nombre de usuario ya está en uso, por favor elige otro.')
+            
             return jsonify({'message': 'El nombre de usuario ya está en uso.'}), 400
         else:
             insertarUsuarioEnCSV(username, password)
@@ -58,8 +58,9 @@ def User():
         username = session['username']
         if request.method == 'POST':
             data = request.get_json()
-            movie_name = data.get('movie_name')
-            assign_relations(username, movie_name)
+            movie_name = [data.get('movie_name')]
+            print(movie_name)
+            assign_relations(username, movie_name,True)
             return jsonify({'message': f'Película {movie_name} asignada a {username}'})
         movies_vecinos = vecinoSimilar(username)
         getRecommendedMovies(username,movies_vecinos)

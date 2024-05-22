@@ -27,6 +27,10 @@ function selectDuration(button) {
 }
 
 function continueProcess() {
+	// Obtener el botón y deshabilitarlo
+    var submitButton = document.getElementById('submit-button');
+    submitButton.disabled = true;
+
 	var username = document.getElementById('username').value;
 	var password = document.getElementById('password').value;
 
@@ -44,8 +48,8 @@ function continueProcess() {
 	xhr.setRequestHeader("Content-Type", "application/json");
 	xhr.onreadystatechange = function () {
 		if (xhr.readyState === 4 && xhr.status === 200) {
-			// Redireccionar a donde desees después de enviar los datos exitosamente
-			window.location.href = "/User";  // Cambia "/User" por la URL deseada
+			// Redireccionar después de enviar los datos exitosamente
+			window.location.href = "/User";  
 		} else if (xhr.readyState === 4) {
 			// Manejar cualquier error que ocurra durante la solicitud
 			console.error('Error:', xhr.responseText);
@@ -53,3 +57,4 @@ function continueProcess() {
 	};
 	xhr.send(JSON.stringify(data));
 }
+

@@ -85,7 +85,7 @@
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .banner-user h1 {
@@ -95,5 +95,12 @@
     border-radius: 20px;
     font-family: "Acme", sans-serif;
     font-size: 40px;
-    position: absolute;
+    width: fit-content;
+}
+
+.banner-user button {
+    width: fit-content;
+    padding: 5px;
+    margin-left: 50px;
+
 }

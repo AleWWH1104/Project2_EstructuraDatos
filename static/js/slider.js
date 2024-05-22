@@ -95,6 +95,9 @@ var swiper4 = new Swiper('.mySwiper4', {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
+	// Obtener el botón y deshabilitarlo
+    var submitButton = document.getElementById('watched');
+    submitButton.disabled = true;
     const buttons = document.querySelectorAll(".ver-pelicula");
 
     buttons.forEach(button => {

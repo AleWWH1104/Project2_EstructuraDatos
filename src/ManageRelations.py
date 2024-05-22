@@ -10,11 +10,15 @@ class Neo4jLoader:
     def __init__(self, connection):
         self.connection = connection
 
-    def assign_movies_to_users(self, username, genres):
+    def assign_movies_to_users(self, username, genres, viewflag):
         with self.connection.get_session() as session:
-            prefijo = "general"
-            movie_names = [prefijo + genre.replace(' ', '') for genre in genres]
-
+            if viewflag:
+                movie_names = genres
+            else:
+                prefijo = "general"
+                movie_names = [prefijo + genre.replace(' ', '') for genre in genres]
+            
+            print(movie_names)
             for movie_name in movie_names:
                 session.write_transaction(self._create_relationship, username, movie_name)
 
@@ -29,5 +33,5 @@ class Neo4jLoader:
 # Inicializar la conexión a Neo4j
 neo4j_loader = Neo4jLoader(neo4j_conexion)
 
-def assign_relations(username, genres):
-    neo4j_loader.assign_movies_to_users(username, genres)
+def assign_relations(username, genres, viewFlag=False):
+    neo4j_loader.assign_movies_to_users(username, genres, viewFlag)

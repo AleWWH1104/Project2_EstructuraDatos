@@ -1,11 +1,13 @@
 import sys
-import os, random
+import os
+import random
 
-# Añadir el directorio raíz al sys.path
+# Añadir el directorio raíz al sys.path para permitir importaciones de módulos desde la raíz del proyecto
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from databases.Neo4jConfig import neo4j_conexion
 
+# Función para encontrar usuarios similares basados en las películas que les gustan
 def vecinoSimilar(username):
     query = """
     MATCH (u1:User {name: $username})-[:LIKES]->(m:Movie)<-[:LIKES]-(u2:User)
@@ -25,6 +27,7 @@ def vecinoSimilar(username):
     
     return similar_users
 
+# Función para obtener películas que le gustan a otro usuario pero no al usuario dado
 def getMoviesVecino(username, otro_usuario):
     query = """
     MATCH (u1:User {name: $username})-[:LIKES]->(m:Movie)
@@ -42,16 +45,19 @@ def getMoviesVecino(username, otro_usuario):
 usuarios_vistos = set()
 peliculas_diferentes = set()
 
+# Función para obtener recomendaciones de películas basadas en los vecinos similares
 def getRecommendedMovies(username, movies_vecinos):
     for user, movies in movies_vecinos:
         usuarios_vistos.add(user)
         peliculas_diferentes.update(getMoviesVecino(username, user))
 
+# Función para seleccionar películas aleatorias
 def aleatoryMovies(movies):
     cant = 10
     selectedMovies = random.sample(movies, cant)
     return selectedMovies
 
+# Función para obtener los géneros más vistos por un usuario
 def genrMoreView(username):
     query = """
     MATCH (u:User {name: $username})-[:LIKES]->(m:Movie)-[:IN_GENRE]->(g:Genre)
@@ -69,6 +75,7 @@ def genrMoreView(username):
     
     return top_genres
 
+# Función para recomendar películas basadas en los géneros más vistos
 def recomend_geners_movie(generes):
     moviesList = []
     for genere in generes:
@@ -78,6 +85,7 @@ def recomend_geners_movie(generes):
 
     return moviesList[0], moviesList[1], moviesList[2]
 
+# Función para obtener nombres de películas por género
 def obtener_nombres_peliculas_por_genero(genero):
     query = """
     MATCH (m:Movie)-[:IN_GENRE]->(g:Genre {name: $genero})
@@ -91,6 +99,7 @@ def obtener_nombres_peliculas_por_genero(genero):
     
     return nombres_peliculas
 
+# Función para crear diccionarios de películas con sus detalles
 def movieDiccionaries(movies):
     movie_Dicc = []
     for movie in movies:
@@ -112,5 +121,5 @@ def movieDiccionaries(movies):
                 })
     return movie_Dicc
 
-# Cerrar la conexión
+# Cerrar la conexión a Neo4j
 neo4j_conexion.close()
